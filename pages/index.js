@@ -64,12 +64,12 @@ export default function Home() {
                         label="Loans"
                         path="/loans" />
                     <Service 
-                        image="/assets/images/icons/Forms_LoanIcon.png" 
+                        image="/assets/images/icons/Forms_InvstIcon.png" 
                         hoverImage="/assets/images/icons/Home_InvstIcon.png" 
                         label="Investments" 
                         path="/investments"/>
                     <Service 
-                        image="/assets/images/icons/Forms_LoanIcon.png" 
+                        image="/assets/images/icons/Forms_CoopIcon.png" 
                         hoverImage="/assets/images/icons/Home_CoopIcon.png" 
                         label="Cooperatives" 
                         path="/cooperatives"/>
