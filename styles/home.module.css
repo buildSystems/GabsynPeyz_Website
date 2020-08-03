@@ -1,0 +1,98 @@
+
+
+.home_background{
+    background-image: url(/assets/images/backgrounds/Home_HeroImg.png);
+    height: calc(100vh - 70px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.home_background2{
+    background-image: url(/assets/images/backgrounds/Home_Img2.png);
+    height: calc(100vh - 70px);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home_background3{
+    background-image: url(/assets/images/backgrounds/Home_MacB.png);
+    height: calc(100vh - 100px);
+    background-size: 55% auto;
+    background-position: 20px center;
+    background-repeat: no-repeat;
+    
+}
+
+.download_app{
+    background-color: var(--greyish);
+    height: calc(100vh - 100px);
+    padding: 50px;
+    
+}
+
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+}
+
+.newsletter_div{
+    max-width: 500px;
+    width: 100%;
+    height: 50px;
+    position: relative;  
+    margin: 20px 0px;  
+}
+.newsletter_input{
+    width: 100%;
+    border: none;
+    background-color: #eee;
+    border-radius: 25px;
+    height: 100%;
+    padding-left: 30px;
+    outline: none !important;
+}
+.newsletter_div button{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.footer_top{
+    padding: 50px;
+    background-color: #eee;    
+}
+
+.footer_bottom{
+    padding: 50px;
+    background-color: #ddd; 
+}
+
+.search_div{
+    width: 100px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.search_div .search_input{
+    width: 100%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+    border-radius: 25px;
+    height: 50px;
+    border: none;
+    padding-left: 50px;
+    outline: none !important;
+}
+
+@media screen and (max-width: 768px){
+    .home_background3{
+        background-image: none;
+        background-color: #eee;
+    }    
+}

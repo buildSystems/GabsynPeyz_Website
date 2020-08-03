@@ -1,0 +1,239 @@
+:root{
+  --greyish: #ddd;
+  --app-purple: #800080;
+  --app-dark-grey: #413C3C;
+  --app-purple-hover: #c412c4;
+  --menu-highlight: #e475e4;
+  --small-font: 12px;
+  --nav-height: 78px;
+  --calculator-width: 300px;
+}
+
+.scrollbars {
+  
+}
+
+.scrollbars::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbars::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+.scrollbars::-webkit-scrollbar-thumb {
+  background-color: var(--app-purple);
+  border-radius: 3px;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--app-purple);
+  border-radius: 3px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container{
+    max-width: 1144px;
+    width: 100%;
+    display: block;
+    margin: auto;
+    text-align: left;
+}
+
+button{
+  background-color: var(--app-purple) !important;
+  color: white;
+  border-radius: 20px !important;
+  border: 1px solid var(--app-purple) !important;
+  font-size: var(--small-font) !important;
+}
+
+button:hover{
+  background-color: var(--app-purple-hover) !important;
+}
+
+.drawerContent{
+  height: 150px; 
+  background-image: url(/assets/images/backgrounds/SideMenu_TopImg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 16px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: baseline;
+  color: white;
+}
+
+.ant-menu, .ant-menu-sub, .ant-menu-item, 
+.ant-menu-submenu, .ant-menu-submenu-inline, 
+.ant-menu-light, .ant-menu-root{
+  background-color: var(--app-purple-hover) !important;
+}
+
+.ant-menu-submenu-title, .ant-menu-item, 
+.ant-menu-submenu-arrow, .ant-menu-item-group-title{
+  color: white !important;
+}
+
+.ant-menu-submenu-arrow{
+  color: white !important;
+}
+
+.ant-menu-submenu-selected, .ant-menu-submenu-active
+/* .ant-menu-item-selected, .ant-menu-item-active */
+{
+  background-color: var(--menu-highlight) !important;
+}
+
+.ant-drawer-body, .ant-drawer-wrapper-body, .ant-drawer-content{ 
+  padding: 0px !important;
+  background-color: var(--app-purple-hover);
+  overflow-x: hidden !important;
+}
+
+.ant-drawer-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ant-drawer-body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+.ant-drawer-body::-webkit-scrollbar-thumb {
+  background-color: var(--app-purple);
+  border-radius: 3px;
+}
+
+.ant-menu.ant-menu-light, .ant-menu-item-group{
+  background-color: var(--app-purple-hover);
+}
+
+.ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left {
+  border-right: none !important;
+}
+
+/* For demo */
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 100vh;
+  line-height: 100vh;
+  overflow: hidden;
+}
+
+.loanSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
+  background-image: url(/assets/images/backgrounds/Loans_HeroImg.png);
+  background-size: cover;
+  background-position: center;  
+}
+
+.loanSlides .ant-carousel .slick-list .slick-slide:nth-child(2){
+  background-image: url(/assets/images/backgrounds/Loans_HeroImg.png);
+  background-size: cover;
+}
+
+.loanSlides .ant-carousel .slick-list .slick-slide:nth-child(3){
+  background-image: url(/assets/images/backgrounds/Loans_HeroImg2.png);
+  background-size: cover;
+    
+}
+.loanSlides .ant-carousel .slick-list .slick-slide:nth-child(4){
+  background-image: url(/assets/images/backgrounds/Loans_HeroImg3.png);
+  background-size: cover;
+  
+}
+
+/* Now for the investment slides */
+
+.investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
+  background-image: url(/assets/images/backgrounds/Invstment_HeroImg.png);
+  background-size: cover;
+  background-position: center;  
+}
+
+.investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(2){
+  background-image: url(/assets/images/backgrounds/Invstment_HeroImg.png);
+  background-size: cover;
+}
+
+.investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(3){
+  background-image: url(/assets/images/backgrounds/Invstment_HeroImg2.png);
+  background-size: cover;
+    
+}
+.investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(4){
+  background-image: url(/assets/images/backgrounds/Invstment_HeroImg3.png);
+  background-size: cover;
+  
+}
+
+/* Now for the cooperative slides */
+
+.cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
+  background-image: url(/assets/images/backgrounds/HeroImgCoop_.png);
+  background-size: cover;
+  background-position: center;  
+}
+
+.cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(2){
+  background-image: url(/assets/images/backgrounds/HeroImgCoop_.png);
+  background-size: cover;
+}
+
+.cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(3){
+  background-image: url(/assets/images/backgrounds/HeroImg2Coop_.png);
+  background-size: cover;
+    
+}
+.cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(4){
+  background-image: url(/assets/images/backgrounds/HeroImg3Coop_.png);
+  background-size: cover;
+  
+}
+
+
+
+@media  screen and (max-width: 768px){
+  .container{
+    width: 100%;
+    padding: 20px;
+    display: block;
+    margin: auto;
+    text-align: left;
+  }
+
+  .ant-carousel .slick-list .slick-slide{
+    background-position: 70% top;
+  }
+}
