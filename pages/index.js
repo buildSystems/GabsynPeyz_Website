@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import Head from 'next/head'
 import Link from 'next/link';
-import {Scaffold, Service, ServiceItem} from '../components';
+import {Scaffold, ServiceItem, Footer} from '../components';
 import Navbar from '../containers/Navbar';
+import Service from '../containers/Service';
 import styles from "../styles/home.module.css";
 import {
   Row, 
@@ -10,8 +11,14 @@ import {
   Typography,
   Space,
   Button,
-  Input
+  Input,
+  Modal,
+  Divider
 } from 'antd';
+import {useRouter} from 'next/router';
+import {connect} from 'react-redux';
+import clsx from 'clsx';
+
 
 
 import {
@@ -20,7 +27,13 @@ import {
 
 const {Title, Text,  Paragraph} = Typography;
 
-export default function Home() {
+
+
+function Home(props) {
+
+  console.log('index props', props);
+
+  let router = useRouter();
 
   return (
     <Scaffold>       
@@ -31,7 +44,7 @@ export default function Home() {
         </Head>
 
         <main>
-
+        
           <Navbar />
           <div className={styles.home_background}>
 
@@ -39,12 +52,12 @@ export default function Home() {
               <Row>
                 <Col md={{span: 12, offset: 12}} >               
 
-                  <div className={styles.search_div}>
+                  <div className={clsx(styles.search_div, 'animate__animated', 'animate__slideInRight')}>
                     <input type="text" placeholder="Search" className={styles.search_input}/>
                     <SearchOutlined style={{
                                               fontSize: '20px', 
                                               position: 'absolute', 
-                                              left: '10px', 
+                                              left: '15px', 
                                               top: '50%', 
                                               transform: 'translateY(-50%)',
                                               'WebkitTransform': 'translateY(-50%)'
@@ -53,22 +66,22 @@ export default function Home() {
                     
                   </div>
 
-                  <Text style={{marginTop: '50px', width: '100%', fontWeight: 'bold'}}>
+                  <Text className={clsx('animate__animated', 'animate__slideInRight')} style={{marginTop: '50px', width: '100%', fontWeight: 'bold'}}>
                     Our services include: 
                   </Text>
 
-                  <div>
+                  <div className={clsx('animate__animated', 'animate__slideInRight')}>
                     <Service 
                         image="/assets/images/icons/Forms_LoanIcon.png" 
                         hoverImage="/assets/images/icons/Home_LoansIcon.png" 
                         label="Loans"
                         path="/loans" />
-                    <Service 
+                    <Service className={clsx('animate__animated', 'animate__slideInRight', 'animate__delay-1s')}
                         image="/assets/images/icons/Forms_InvstIcon.png" 
                         hoverImage="/assets/images/icons/Home_InvstIcon.png" 
                         label="Investments" 
                         path="/investments"/>
-                    <Service 
+                    <Service className={clsx('animate__animated', 'animate__slideInRight', 'animate__delay-2s')}
                         image="/assets/images/icons/Forms_CoopIcon.png" 
                         hoverImage="/assets/images/icons/Home_CoopIcon.png" 
                         label="Cooperatives" 
@@ -83,30 +96,30 @@ export default function Home() {
 
           <div className={styles.home_background2}>
 
-            <div className="container" style={{paddingTop: '50px'}}>
+            <div className={clsx("container", 'animate__animated', 'animate__slideInLeft')} style={{paddingTop: '50px'}}>
               <Row>
                 <Col md={{span: 12}}>  
-                    <Title level={4}>This is a stand in place header</Title>
-                    <Title level={2}>This is supposed to be the big title.</Title>
+                    <Title level={4}> </Title>
+                    <Title level={2} style={{textAlign: 'right'}}>Here are some of the reasons our customers trust us...</Title>
                     <ServiceItem 
-                      logo="/assets/images/icons/Forms_LoanIcon.png" 
-                      title="This is just the title. Don't tell...">
-                      lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+                      logo="/assets/images/icons/trust.png" 
+                      title="Why Choose Us?">
+                      We are a team of young professionals with a shared wealth of experience in various sectors of the economy who have come together to provide solutions to individuals and business.
                     </ServiceItem>
                     <ServiceItem 
-                      logo="/assets/images/icons/Forms_LoanIcon.png" 
-                      title="This is just the title. Don't tell...">
-                      lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+                      logo="/assets/images/icons/trust.png" 
+                      title="What We Believe">
+                      We believe all goals can be achieved with the right kind of support. Because we believe so strongly in our clients, we listen to them, we understand them and we make it work for them!
                     </ServiceItem>
                     <ServiceItem 
-                      logo="/assets/images/icons/Forms_LoanIcon.png" 
-                      title="This is just the title. Don't tell...">
-                      lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+                      logo="/assets/images/icons/trust.png" 
+                      title="What We Do">
+                      We provide creative tailor made Financial, Advisory and Logistics solutions to Individuals and businesses with a view to helping them grow. We provide Rent Advance to Landlords pending the actual receipt of rents.
                     </ServiceItem>
                     <ServiceItem 
-                      logo="/assets/images/icons/Forms_LoanIcon.png" 
-                      title="This is just the title. Don't tell...">
-                      lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+                      logo="/assets/images/icons/trust.png" 
+                      title="Our Tenets">
+                      Flexible Solutions, Leadership, Integrity, Innovation, Reliability, Passion for Excellence
                     </ServiceItem>
                     
 
@@ -118,13 +131,13 @@ export default function Home() {
 
           <div className={styles.home_background3}>
 
-            <div className="container" style={{paddingTop: '100px'}}>
+            <div className={clsx("container", 'animate__animated', 'animate__slideInRight')}  style={{paddingTop: '100px'}}>
               <Row>
                 <Col md={{span:8, offset:16}}>  
                     <Title level={4}>About Us</Title>
-                    <Text><strong>create sustainable practices whilst building stakeholders value in our pursuit for excellence.</strong></Text>
-                    <Paragraph ellipsis={{ rows: 5}} style={{marginTop: '10px'}}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi mattis neque scelerisque non leo quis. Sit laoreet nisi maecenas sit diam elementum, ac fusce. Mattis metus, vel mi non viverra sit egestas eleifend. Ultrices tellus tempus pulvinar elit placerat fermentum facilisi risus. Vestibulum sapien nisl diam urna. In orci euismod mollis eleifend pellentesque. Et lacus, augue interdum lacus eget volutpat faucibus turpis. Auctor hendrerit sit dolor in. Nunc velit, massa leo rhoncus, sed ut eu. Id egestas quis dolor vel sed urna etiam. Ipsum sollicitudin cras sagittis aenean condimentum sagittis, elementum, felis tincidunt. Erat senectus pretium, integer non porttitor quisque rutrum. Morbi adipiscing molestie congue pulvinar a amet, in at.
+                    <Text><strong>What we do</strong></Text>
+                    <Paragraph ellipsis={{ rows: 6}} style={{marginTop: '10px'}}>
+                    Gabsyn Peyzs Surulere Cooperative (Multipurpose) Society Ltd is a member owned indigenous society established by a set of young upward mobile entrepreneurs and professionals (men and women of integrity) in their respective fields ; the concept was to build a Synergy of both the formal and informal sectors in response to individual and collective socio-economic needs in order to fulfil purpose, thus the main objectives of the society is to help members with working capital , financial and risk management advisory services, housing, etc. to enable them develop multiple streams of income and achieve financial freedom...
                     </Paragraph>  
                     <Link href="#">
                       <Button size="large" type="primary" 
@@ -195,71 +208,8 @@ export default function Home() {
             />                  */}
 
           </div>{/* <!-- end of newsletter section --> */}
-          <footer>
-            <div className={styles.footer_top}>
-
-              <div className="container">
-                <Row>
-
-                  <Col span={8} style={{paddingRight: "50px"}}>
-                    <Title level={4} style={{fontSize: '12px'}}>GET IN TOUCH</Title>
-                    <Text style={{fontSize: '12px'}}>Headquarters:</Text> 
-                    <br />
-                    <Text style={{fontSize: '12px'}}> No 1, Afinni Street, Off Adelabu, by Alhaji Masha, Surulere, Lagos</Text> 
-                    <br />
-                    <Text style={{fontSize: '12px'}}>Phone:08106345038, 08187313922, 08063047854 Email: care@gabsynpeyzs.com,info@gabsynpeyzs.com</Text>
-                  </Col>
-
-                  <Col span={8} style={{paddingRight: "50px"}}>
-                    <Title level={4} style={{fontSize: '12px'}}>RECENT POSTS</Title>
-                    <Text style={{fontSize: '12px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis neque turpis placerat pellentesque pulvinar euismod velit porttitor. Risus dignissim tempus ac morbi porttitor. Sed diam pharetra eu sed praesent. Nunc, vulputate aenean vulputate nec amet at nisi morbi tempor. Enim tincidunt laoreet non erat.</Text> 
-                  </Col>
-
-                  <Col span={8} >
-                    <Title level={4} style={{fontSize: '12px'}}>THE GABSYN PEYZS</Title>
-                    <Text style={{fontSize: '12px'}}>
-                    The Gabsyn Peyzs was established in 2015 as a response to the rigid, lengthy, and difficult credit processes in this part of the world. We believe in Simple, Creative &amp; Flexible Loan applications.  
-                    </Text> 
-                  </Col>
-
-                </Row>
-              </div>
-
-            </div>{/* <!-- end of footer_top section --> */}
-
-            <div className={styles.footer_bottom}>
-
-              <div className="container">
-                  <Row>
-                    
-                    <Col span={6} style={{paddingRight: "50px"}}>
-                      <Text style={{fontSize: '12px'}}>Copyrights © 2020 All Rights Reserved The Gabsyn Peyzs. Terms of Use / Powered by decode24</Text> 
-                    </Col>
-
-
-                    <Col span={6} offset={12} style={{textAlign: 'right'}}>
-                      <div style={{textAlign: 'right'}}>
-                        <Space size="small">
-                          <a href="#" target="_blank"><img src="/assets/images/icons/zmdi_facebook-box.png" alt="facebook" /></a>
-                          <a href="#" target="_blank"><img src="/assets/images/icons/ant-design_twitter-square-filled.png" alt="twitter" /></a>
-                          <a href="#" target="_blank"><img src="/assets/images/icons/entypo-social_instagram.png" alt="instagram" /></a>
-                        </Space>                        
-                      </div>
-                      <Text style={{fontSize: '12px'}}>
-                      care@gabsynpeyzs.com,info@gabsynpeyzs.com 08106345038 gabsynonskype
-                      </Text> 
-                    </Col>
-
-                  </Row>
-
-              </div>
-              
-
-            </div>{/* <!-- end of footer_bottom section --> */}
-
-          </footer>
-
           
+          <Footer />         
          
         </main>
 
@@ -270,3 +220,19 @@ export default function Home() {
     
   )
 }
+
+
+const mapStateToProps = (state) => {
+  return {
+    progressVisible: state.setProgressReducer.progressVisible
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+      setProgressVisible : (visible) => dispatch(actions.setProgressVisible(visible))
+  }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

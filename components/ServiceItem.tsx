@@ -14,6 +14,7 @@ const ServiceItem = (props:Props) => {
     return (
     <div className="listItem">
         <img src={props.logo} alt="" />
+        <i className="fas fa-check-circle"></i>
 
         <div>
             <h4><strong>{props.title}</strong></h4>

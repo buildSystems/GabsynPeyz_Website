@@ -1,13 +1,19 @@
 import React, {Component} from 'react';
 import '../styles/global.css';
 import 'antd/dist/antd.css';
+import 'animate.css/animate.css';
 import {createStore, combineReducers} from 'redux';
 import * as reducers from '../reducers';
 import {Provider} from 'react-redux';
 
+
 let store = createStore(
                    combineReducers(
-                    {drawerReducer:reducers.drawerReducer, setUserReducer:reducers.setUserReducer}       
+                    {
+                        drawerReducer:reducers.drawerReducer, 
+                        setUserReducer:reducers.setUserReducer,
+                        setProgressReducer:reducers.setProgressReducer
+                    }       
                    )
             );
 

@@ -13,6 +13,7 @@
     height: calc(100vh - 70px);
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 50px 0px 100px 0px;
 }
 
 .home_background3{
@@ -20,8 +21,7 @@
     height: calc(100vh - 100px);
     background-size: 55% auto;
     background-position: 20px center;
-    background-repeat: no-repeat;
-    
+    background-repeat: no-repeat;   
 }
 
 .download_app{

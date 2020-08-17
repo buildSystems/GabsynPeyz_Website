@@ -8,15 +8,29 @@ interface Props{
     image: string,
     hoverImage: string,
     label: string,
-    path: string
+    path: string,
+    progressVisible?: boolean,
+    setProgressVisible?: any
 }
 
 const Service = (props:Props) => {
+
+//   console.log('Services props', props);
+
+  const handleNavigation = (dest) => {
+    props.setProgressVisible(true); 
+    setTimeout(function(){
+        router.push(dest)
+    }, 1000);
+    setTimeout(function(){
+        props.setProgressVisible(false);        
+    }, 1500);
+}
     
   const router = useRouter();
 
     return (
-        <div className="aService" onClick={() => router.push(props.path)}>
+        <div className="aService" onClick={() => handleNavigation(props.path)}>
             <img src={props.image} className="defaultImg" alt={`${props.label} image`} />
             <img src={props.hoverImage} className="hoverImg" alt={`${props.label} hover image`} />
             <p className="label" >{props.label}</p>

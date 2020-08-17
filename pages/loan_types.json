@@ -1,0 +1,102 @@
+ [
+    {
+        "name": "Salary Loan",
+        "APR rate": 97.1128,
+        "flat rate": 5.0
+    },
+    {
+        "name": "Asset-Backed Loan",
+        "APR rate":"130.864",
+        "flat rate": 7.0
+    }, 
+    {
+        "name": "Business/SME Loan",
+        "APR rate":130.864,
+        "flat rate": 7.0
+    },
+    {
+        "name":"Asset-Financing Loan",
+        "APR rate": 130.864,
+        "flat rate": 7.0
+    }, 
+    {
+        "name":"Rent Advance Loan",
+        "APR rate": 97.1128,
+        "flat rate": 5.0
+    }, 
+    {
+        "name":"Self-Employed Loan",
+        "APR rate": 130.864,
+        "flat rate": 7.0
+    },
+    {
+        "name":"One-Month Loan",
+        "APR rate": 97.1128,
+        "flat rate": 5.0
+    }, 
+    {
+        "name":"Co-operativeLoan",
+        "APR rate":70.26,
+        "flat rate": 3.5
+    }, 
+    {
+        "name":"Staff Loan",
+        "APR rate":60.95,
+        "flat rate": 3.0
+    },
+    {
+        "name":"Agricultural Loan",
+        "APR rate":97.1128,
+        "flat rate": 5.0
+    }, 
+    {
+        "name":"Personal Loan",
+        "APR rate": 97.1128,
+        "flat rate": 5.0
+    }, 
+    {
+        "name":"Returning Client Loan",
+        "APR rate": 79.384,
+        "flat rate": 4.0
+    },
+    {
+        "name":"Public Sector Loan",
+        "APR rate": 114.2455,
+        "flat rate": 6.0
+    }, 
+    {
+        "name":"Salary Advance (1 Month)",
+        "APR rate": 97.1128,
+        "flat rate": 5.0
+    }, 
+    {
+        "name":"School Fee",
+        "APR rate": 106.0026,
+        "flat rate": 5.5
+    },
+    {
+        "name":"Loan Refinancing",
+        "APR rate": 130.864,
+        "flat rate": 7.0
+    }, 
+    {
+        "name":"Rate A+",
+        "APR rate": 97.1128,
+        "flat rate": 5.0
+    }, 
+    {
+        "name":"Rate A",
+        "APR rate": 97.1128,            
+        "flat rate": 5.0
+    },
+    {
+        "name":"Rate B",
+        "APR rate": 106.0026,
+        "flat rate": 5.5
+    }, 
+    {
+        "name":"Rate C",
+        "APR rate": 120.51,
+        "flat rate": 6.5
+    }
+]

@@ -10,14 +10,16 @@ const mapStateToProps = (state : StoreState) => {
     return {
         isLoggedIn: state.setUserReducer.isLoggedIn,
         drawerVisible: state.drawerReducer.drawerVisible,
-        loggedInUser: state.setUserReducer.loggedInUser
+        loggedInUser: state.setUserReducer.loggedInUser,
+        progressVisible: state.setProgressReducer.progressVisible
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
         setCurrentUser: () => dispatch(actions.setCurrentUser(getCurrentUser())),
-        toggleDrawer : () => dispatch(actions.toggleDrawer(true))
+        toggleDrawer : () => dispatch(actions.toggleDrawer(true)),
+        setProgressVisible : (visible) => dispatch(actions.setProgressVisible(visible))
     }
 }
 

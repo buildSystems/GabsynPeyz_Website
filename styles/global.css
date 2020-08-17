@@ -152,23 +152,23 @@ button:hover{
   overflow: hidden;
 }
 
-.loanSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
+/* .loanSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
   background-image: url(/assets/images/backgrounds/Loans_HeroImg.png);
   background-size: cover;
   background-position: center;  
-}
+} */
 
-.loanSlides .ant-carousel .slick-list .slick-slide:nth-child(2){
+.loanSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
   background-image: url(/assets/images/backgrounds/Loans_HeroImg.png);
   background-size: cover;
 }
 
-.loanSlides .ant-carousel .slick-list .slick-slide:nth-child(3){
+.loanSlides .ant-carousel .slick-list .slick-slide:nth-child(2){
   background-image: url(/assets/images/backgrounds/Loans_HeroImg2.png);
   background-size: cover;
     
 }
-.loanSlides .ant-carousel .slick-list .slick-slide:nth-child(4){
+.loanSlides .ant-carousel .slick-list .slick-slide:nth-child(3){
   background-image: url(/assets/images/backgrounds/Loans_HeroImg3.png);
   background-size: cover;
   
@@ -176,23 +176,23 @@ button:hover{
 
 /* Now for the investment slides */
 
-.investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
+/* .investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
   background-image: url(/assets/images/backgrounds/Invstment_HeroImg.png);
   background-size: cover;
   background-position: center;  
-}
+} */
 
-.investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(2){
+.investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
   background-image: url(/assets/images/backgrounds/Invstment_HeroImg.png);
   background-size: cover;
 }
 
-.investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(3){
+.investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(2){
   background-image: url(/assets/images/backgrounds/Invstment_HeroImg2.png);
   background-size: cover;
     
 }
-.investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(4){
+.investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(3){
   background-image: url(/assets/images/backgrounds/Invstment_HeroImg3.png);
   background-size: cover;
   
@@ -200,29 +200,127 @@ button:hover{
 
 /* Now for the cooperative slides */
 
-.cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
+/* .cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
   background-image: url(/assets/images/backgrounds/HeroImgCoop_.png);
   background-size: cover;
   background-position: center;  
-}
+} */
 
-.cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(2){
+.cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
   background-image: url(/assets/images/backgrounds/HeroImgCoop_.png);
   background-size: cover;
 }
 
-.cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(3){
+.cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(2){
   background-image: url(/assets/images/backgrounds/HeroImg2Coop_.png);
   background-size: cover;
     
 }
-.cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(4){
+.cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(3){
   background-image: url(/assets/images/backgrounds/HeroImg3Coop_.png);
   background-size: cover;
   
 }
 
+.apply_background{
+  height: 500px;
+  background-image: url(/assets/images/backgrounds/Forms_HeroImg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+.ant-modal-content{
+  text-align: center;  
+}
+
+.ant-modal-body {
+    
+}
+
+.ant-modal-body .modalBottomSplit{
+  display: flex;  
+}
+
+.ant-modal-body .modalBottomSplit div{
+  flex: 1;
+}
+
+.ant-modal-body .modalBottomSplit ul{
+  padding-left: 15px;
+}
+
+.ant-modal-content{
+  border-radius: 15px !important;
+  overflow: hidden;
+}
+
+.ant-modal-content .ant-modal-close{
+  background-color: white !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.ant-modal-footer{
+  text-align: center  !important;
+}
+
+.ant-modal-footer button{
+  padding: 10px 30px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.formSection{
+  
+}
+
+.questionsList li{
+  margin: 15px 0px;
+}
+
+.formInput{
+  border: none;
+  border-bottom: 1px solid#aaa;
+  width: 100%;
+  height: 42px;
+  outline: none !important;
+  padding-left: 10px;
+  
+}
+
+.formInputDiv{
+  display: flex;
+  margin-top: 30px;
+  
+}
+
+.formInputDiv div{
+  flex: 1;
+  padding-right: 10px;
+}
+
+.formInputDiv label{
+  font-weight: bold;
+  align-self: baseline !important;
+  color: #aaa;
+
+}
+
+.ant-menu-submenu:hover{
+  background-color: var(--menu-highlight) !important;
+}
+
+/* .ant-menu-submenu-title:hover{
+  background-color: white !important;
+} */
+
+.ant-menu-item-only-child:hover{
+  background-color: var(--menu-highlight) !important;
+}
+
+.ant-menu-submenu-arrow::after, .ant-menu-submenu-arrow::before{
+  background-image: linear-gradient(to right, rgba(255,255, 255, 0.65), rgba(255, 255,255, 0.65)) !important;
+}
 
 @media  screen and (max-width: 768px){
   .container{
