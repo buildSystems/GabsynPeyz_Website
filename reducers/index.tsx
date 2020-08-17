@@ -5,7 +5,9 @@ import * as constants from '../constants';
 let initialState = {isLoggedIn: false, drawerVisible: true, loggedInUser: null, progressVisible: false};
 
 export function drawerReducer(state: StoreState = initialState, action: actions.ToggleDrawer): StoreState{
-    return {...state, drawerVisible:!state.drawerVisible};    
+   
+    return {...state, drawerVisible:!state.drawerVisible} ;
+        
 }
 
 export function setUserReducer(state: StoreState = initialState, action: actions.CurrentUserAction): StoreState{

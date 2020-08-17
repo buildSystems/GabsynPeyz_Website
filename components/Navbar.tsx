@@ -71,6 +71,7 @@ const Navbar = (props:Props) => {
     let [cooperative4ModalOpen, setCooperative4ModalOpen] = useState(false);
 
 
+
     const handleApplyNavigation = (dest) => {
         setLoansModalOpen(false); 
         setLoans2ModalOpen(false); 
@@ -79,7 +80,7 @@ const Navbar = (props:Props) => {
         setTimeout(function(){
             props.toggleDrawer();
             // router.push(Constants.REGISTER)
-            window.location = Constants.REGISTER;
+            // location = Constants.REGISTER;
         }, 1000);
         setTimeout(function(){            
             props.setProgressVisible(false);             
@@ -87,7 +88,7 @@ const Navbar = (props:Props) => {
     }
 
 
-    console.log('Route path:', router.pathname);
+    console.log('Constants.REGISTER:', Constants.REGISTER);
         
     return (
         <div>
@@ -97,10 +98,12 @@ const Navbar = (props:Props) => {
                 title="SALARY EARNER LOAN"
                 onOk={() => handleApplyNavigation('/apply-for-loan')}
                 onCancel={() => setLoansModalOpen(false)}
-                footer={[            
-                    <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
-                    APPLY
-                    </Button>,
+                footer={[ 
+                    <a href={Constants.REGISTER}>                              
+                        <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
+                            APPLY
+                        </Button> 
+                    </a>                   
                 ]}
                 >
                 <div className="modalMainDesc">
@@ -138,10 +141,12 @@ const Navbar = (props:Props) => {
                 title="SALARY ADVANCE"
                 onOk={() => handleApplyNavigation('/apply-for-loan')}
                 onCancel={() => setLoans2ModalOpen(false)}
-                footer={[            
-                    <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
-                    APPLY
-                    </Button>,
+                footer={[ 
+                    <a href={Constants.REGISTER}>                              
+                        <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
+                            APPLY
+                        </Button> 
+                    </a>                   
                 ]}
                 >
                 <div className="modalMainDesc">
@@ -179,10 +184,12 @@ const Navbar = (props:Props) => {
                 title="BUSINESS OWNER"
                 onOk={() => handleApplyNavigation('/apply-for-loan')}
                 onCancel={() => setLoans3ModalOpen(false)}
-                footer={[            
-                    <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
-                    APPLY
-                    </Button>,
+                footer={[ 
+                    <a href={Constants.REGISTER}>                              
+                        <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
+                            APPLY
+                        </Button> 
+                    </a>                   
                 ]}
                 >
                 <div className="modalMainDesc">
@@ -227,10 +234,12 @@ const Navbar = (props:Props) => {
                 title="MICRO BUSINESS LOAN"
                 onOk={() => handleApplyNavigation('/apply-for-loan')}
                 onCancel={() => setLoans4ModalOpen(false)}
-                footer={[            
-                    <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
-                    APPLY
-                    </Button>,
+                footer={[ 
+                    <a href={Constants.REGISTER}>                              
+                        <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
+                            APPLY
+                        </Button> 
+                    </a>                   
                 ]}
                 >
                 <div className="modalMainDesc">
@@ -274,10 +283,12 @@ const Navbar = (props:Props) => {
                 title="COOPERATIVE LOAN"
                 onOk={() => handleApplyNavigation('/apply-for-loan')}
                 onCancel={() => setLoans5ModalOpen(false)}
-                footer={[            
-                    <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
-                    APPLY
-                    </Button>,
+                footer={[ 
+                    <a href={Constants.REGISTER}>                              
+                        <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
+                            APPLY
+                        </Button> 
+                    </a>                   
                 ]}
                 >
                 <div className="modalMainDesc">
@@ -324,10 +335,12 @@ const Navbar = (props:Props) => {
                 title="GPL PALADIUM INCOME FUND"
                 onOk={() => handleApplyNavigation('/apply-for-loan')}
                 onCancel={() => setInvestmentModalOpen(false)}
-                footer={[            
-                    <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
-                    APPLY
-                    </Button>,
+                footer={[ 
+                    <a href={Constants.REGISTER}>                              
+                        <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
+                            APPLY
+                        </Button> 
+                    </a>                   
                 ]}
                 >
                 <div className="modalMainDesc" >
@@ -384,10 +397,12 @@ const Navbar = (props:Props) => {
                 title="GPL PLATINUM INCOME FUND"
                 onOk={() => handleApplyNavigation('/apply-for-loan')}
                 onCancel={() => setInvestment2ModalOpen(false)}
-                footer={[            
-                    <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
-                    APPLY
-                    </Button>,
+                footer={[ 
+                    <a href={Constants.REGISTER}>                              
+                        <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
+                            APPLY
+                        </Button> 
+                    </a>                   
                 ]}
                 >
                 <div className="modalMainDesc" >
@@ -415,10 +430,12 @@ const Navbar = (props:Props) => {
                 title="GPL PEARL INCOME FUND"
                 onOk={() => handleApplyNavigation('/apply-for-loan')}
                 onCancel={() => setInvestment3ModalOpen(false)}
-                footer={[            
-                    <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
-                    APPLY
-                    </Button>,
+                footer={[ 
+                    <a href={Constants.REGISTER}>                              
+                        <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
+                            APPLY
+                        </Button> 
+                    </a>                   
                 ]}
                 >
                 <div className="modalMainDesc" >
@@ -446,10 +463,12 @@ const Navbar = (props:Props) => {
                 title="GPL DETAIL INCOME FUND"
                 onOk={() => handleApplyNavigation('/apply-for-loan')}
                 onCancel={() => setInvestment4ModalOpen(false)}
-                footer={[            
-                    <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
-                    APPLY
-                    </Button>,
+                footer={[ 
+                    <a href={Constants.REGISTER}>                              
+                        <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
+                            APPLY
+                        </Button> 
+                    </a>                   
                 ]}
                 >
                 <div className="modalMainDesc" >
@@ -472,10 +491,12 @@ const Navbar = (props:Props) => {
                 title="GPL GOLD COOP SAVINGS ACCOUNT"
                 onOk={() => handleApplyNavigation('/apply-for-loan')}
                 onCancel={() => setCooperativeModalOpen(false)}
-                footer={[            
-                    <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
-                    APPLY
-                    </Button>,
+                footer={[ 
+                    <a href={Constants.REGISTER}>                              
+                        <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
+                            APPLY
+                        </Button> 
+                    </a>                   
                 ]}
                 >
                 <div className="modalMainDesc" >
@@ -522,10 +543,12 @@ const Navbar = (props:Props) => {
                 title="GPL DIAMOND COOP SAVINGS ACCOUNT"
                 onOk={() => handleApplyNavigation('/apply-for-loan')}
                 onCancel={() => setCooperative2ModalOpen(false)}
-                footer={[            
-                    <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
-                    APPLY
-                    </Button>,
+                footer={[ 
+                    <a href={Constants.REGISTER}>                              
+                        <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
+                            APPLY
+                        </Button> 
+                    </a>                   
                 ]}
                 >
                 <div className="modalMainDesc" >
@@ -575,10 +598,12 @@ const Navbar = (props:Props) => {
                 title="GPL PLATINUM COOP SAVINGS ACCOUNT"
                 onOk={() => handleApplyNavigation('/apply-for-loan')}
                 onCancel={() => setCooperative3ModalOpen(false)}
-                footer={[            
-                    <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
-                    APPLY
-                    </Button>,
+                footer={[ 
+                    <a href={Constants.REGISTER}>                              
+                        <Button key="submit" type="primary" loading={false} onClick={() => handleApplyNavigation('/apply-for-loan')} >
+                            APPLY
+                        </Button> 
+                    </a>                   
                 ]}
                 >
                 <div className="modalMainDesc" >

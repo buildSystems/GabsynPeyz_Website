@@ -12,4 +12,4 @@ export type PROGRESS_VISIBLE = typeof PROGRESS_VISIBLE;
 
 //Route
 export const BASE_PATH: string = "http://localhost:3000/";
-export const REGISTER: string = "http://161.35.175.18/register";
+export const REGISTER: string = "http://161.35.175.18/user/register";

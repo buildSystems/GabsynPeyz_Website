@@ -18,7 +18,7 @@ const mapStateToProps = (state : StoreState) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         setCurrentUser: () => dispatch(actions.setCurrentUser(getCurrentUser())),
-        toggleDrawer : () => dispatch(actions.toggleDrawer(true)),
+        toggleDrawer : () => dispatch(actions.toggleDrawer(null)),
         setProgressVisible : (visible) => dispatch(actions.setProgressVisible(visible))
     }
 }
