@@ -1000,7 +1000,7 @@ const Navbar = (props:Props) => {
                     display: flex;
                     align-items: center;
                     position: fixed;
-                    z-index: 10;
+                    z-index: 200;
                 }
                 .hamburger{
                     cursor: pointer;
@@ -1028,6 +1028,15 @@ const Navbar = (props:Props) => {
 
                 .progressDiv img{
                     height: 120px;
+                }
+
+                @media screen and (max-width: 768px){
+                    .hamburger{
+                        cursor: pointer;
+                        margin-left: 20px;
+                        margin-right: 0px;  
+                        height: 40px;               
+                    }
                 }
                 `}
             </style>

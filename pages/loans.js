@@ -198,7 +198,7 @@ export default function Loans() {
 
                 <div>
                     <div className="container">
-                        <div style={{width: '300px', position: 'absolute'}}>
+                        <div className="loansText" >
                             
                             <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>                        
                                 With GPL Salary Loan                   
@@ -207,12 +207,12 @@ export default function Loans() {
                                 Everyday is a payday with up to 50% of your salary payout within 24 hours of request
                             </p>
                             
-                            <Link href="/loans#">
+                            {/* <Link href="/loans#">
                                 <Button size="large" type="primary" 
                                         style={{marginTop: '20px', paddingLeft: '30px', paddingRight: '30px'}}>
                                         LEARN MORE
                                 </Button>
-                            </Link>
+                            </Link> */}
                         </div>   
                     </div>
                 </div>{/*<!-- end of slide -->*/}
@@ -220,7 +220,7 @@ export default function Loans() {
                 <div>
 
                     <div className="container">
-                        <div style={{width: '300px', position: 'absolute'}}>
+                        <div className="loansText" >
                             
                             <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>                        
                             Need Quick Cash?                   
@@ -229,12 +229,12 @@ export default function Loans() {
                             Get up to 5 million Naira within 24 hours with easy and convenience repayment plan
                             </p>
                             
-                            <Link href="/loans#">
+                            {/* <Link href="/loans#">
                                 <Button size="large" type="primary" 
                                         style={{marginTop: '20px', paddingLeft: '30px', paddingRight: '30px'}}>
                                         LEARN MORE
                                 </Button>
-                            </Link>
+                            </Link> */}
                         </div>   
                     </div>
                    
@@ -242,21 +242,21 @@ export default function Loans() {
 
                 <div>
                     <div className="container">
-                        <div style={{width: '300px', position: 'absolute'}}>
+                        <div className="loansText" >
                             
-                            <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>                        
+                            <Title level={2} style={{color: 'var(--app-purple)', width: '200px'}}>                        
                             Get Asset backed loans                   
                             </Title>
-                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', lineHeight: '1.0rem'}}>
+                            <p style={{color: 'var(--app-purple)', marginBottom: '0px !important', lineHeight: '1em'}}>
                             Get the right loan to help you meet your business needs of up to 10 million Naira within 24 hours
                             </p>
                                                         
-                            <Link href="/loans#">
-                                <Button size="large" type="primary" 
-                                        style={{marginTop: '20px', paddingLeft: '30px', paddingRight: '30px'}}>
+                            {/* <Link href="/loans#"> */}
+                                {/* <Button size="large" type="primary" 
+                                        style={{marginTop: '0px !important', paddingLeft: '30px', paddingRight: '30px'}}>
                                         LEARN MORE
-                                </Button>
-                            </Link>
+                                </Button> */}
+                            {/* </Link> */}
                         </div>   
                     </div>                
                    
@@ -269,23 +269,6 @@ export default function Loans() {
                                                 paddingTop: '350px',
                                                 transform: 'translateX(-50%)',
                                                 height: '100%'}}>
-
-                {/* <div style={{width: '300px', position: 'absolute'}}>
-                    
-                    <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>                        
-                        {currentTitle}                   
-                    </Title>
-                    <p style={{color: 'var(--app-purple)', marginBottom: '0px', lineHeight: '1.0rem'}}>
-                         {currentBody}
-                    </p>
-                    
-                    <Link href="/loans#">
-                        <Button size="large" type="primary" 
-                                style={{marginTop: '20px', paddingLeft: '30px', paddingRight: '30px'}}>
-                                LEARN MORE
-                        </Button>
-                    </Link>
-                </div>    */}
 
                 <div className="calculator" >
                     
@@ -338,42 +321,7 @@ export default function Loans() {
             <style jsx>
                 {
                     `  
-                    .calculator{
-                        background-color: white; 
-                        border-radius: 15px; 
-                        padding: 15px; 
-                        width: var(--calculator-width); 
-                        position: absolute;
-                        bottom: 16px; 
-                        right: 0px;
-                        box-shadow: 2px 2px 5px rgba(0,0,0,.2);
-                    } 
-                    .calculator label, .calculator input, .calculator small{
-                        display: block;
-                        color: var(--app-purple);
-                    }    
-
-                    .calculator label{
-                        font-size: 10px;
-                    }
-
-                    .calculator input, .calculator select{
-                        width: 100%;
-                        border-radius: 5px;
-                        border: 1px solid var(--app-purple);
-                        padding-left: 5px;
-                        font-size: 13px;
-                        outline: none;
-                    }
                     
-                    .calculator small{
-                        margin-bottom: 5px;
-                    }
-
-                    .calculator .error{
-                        color: red;
-                    }
-
                     .ant-radio-wrapper{
                         font-size: 12px;
                     }

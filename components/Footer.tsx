@@ -62,27 +62,33 @@ const Footer = () => {
                 <div className="container">
                     <Row>
                         
-                        <Col span={6} style={{paddingRight: "50px"}}>
+                        <Col md={{span: 6}} style={{paddingRight: "50px"}}>
                         <Text style={{fontSize: '12px'}}>Copyrights © 2020 All Rights Reserved The Gabsyn Peyzs. Terms of Use / Powered by decode24</Text> 
                         </Col>
 
 
-                        <Col span={6} offset={12} style={{textAlign: 'right'}}>
-                        <div style={{textAlign: 'right'}}>
-                            <Space size="small">
-                            <a href="#" target="_blank"><img src="/assets/images/icons/zmdi_facebook-box.png" alt="facebook" /></a>
-                            <a href="#" target="_blank"><img src="/assets/images/icons/ant-design_twitter-square-filled.png" alt="twitter" /></a>
-                            <a href="#" target="_blank"><img src="/assets/images/icons/entypo-social_instagram.png" alt="instagram" /></a>
-                            </Space>                        
-                        </div>
-                        <Text style={{fontSize: '12px'}}>
-                        care@gabsynpeyzs.com,info@gabsynpeyzs.com 08106345038 gabsynonskype
-                        </Text> 
+                        <Col md={{span: 6, offset: 12}} >
+                            <div >
+                                <Space size="small">
+                                <a href="#" target="_blank"><img src="/assets/images/icons/zmdi_facebook-box.png" alt="facebook" /></a>
+                                <a href="#" target="_blank"><img src="/assets/images/icons/ant-design_twitter-square-filled.png" alt="twitter" /></a>
+                                <a href="#" target="_blank"><img src="/assets/images/icons/entypo-social_instagram.png" alt="instagram" /></a>
+                                </Space>                        
+                            </div>
+                            <Text style={{fontSize: '12px'}}>
+                            care@gabsynpeyzs.com,info@gabsynpeyzs.com 08106345038 gabsynonskype
+                            </Text> 
                         </Col>
 
                     </Row>
 
                 </div>
+
+                <style jsx>{
+                    `
+                    
+                    `
+                }</style>
                 
 
             </div>{/* <!-- end of footer_bottom section --> */}

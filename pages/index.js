@@ -28,10 +28,9 @@ import {
 const {Title, Text,  Paragraph} = Typography;
 
 
-
 function Home(props) {
 
-  console.log('index props', props);
+  // console.log('index props', props);
 
   let router = useRouter();
 
@@ -154,19 +153,19 @@ function Home(props) {
 
           <div className={styles.download_app}>
 
-            <div className="container">
+            <div className="container" style={{paddingTop: 50, paddingBottom: 50}}>
               <Row >
-                <Col span={12} style={{textAlign: 'right', paddingTop: '100px', paddingRight: '30px', display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
-                  <Title level={2} style={{marginLeft: '100px', color: 'var(--app-purple)'}}>Download the Gabsyn Peysz Mobile App</Title>
-                  <Space style={{alignSelf: 'flex-end'}}>
+                <div className="downloadLeft" >
+                  <h1 className="header" >Download the Gabsyn Peysz Mobile App</h1>
+                  <div className="appStore">
                     <a href="#" target="_blank">
                       <img src="/assets/images/Home_AppleStore.png" alt="appstore logo" style={{width: '160px'}}/>
                     </a>
                     <a href="#" target="_blank">
                       <img src="/assets/images/Home_GPlay.png" alt="googleplay logo" style={{width: '160px'}}/>
                     </a>
-                  </Space>
-                  <div style={{alignSelf: 'flex-end'}}>
+                  </div>
+                  <div className="learnMoreButton">
                     <Link href="#">
                       <Button size="large" type="primary" 
                             style={{marginTop: '30px', paddingLeft: '30px', paddingRight: '30px'}}>
@@ -175,10 +174,10 @@ function Home(props) {
                     </Link>
                   </div>
                   
-                </Col>
-                <Col span={12} >
+                </div>
+                <div className="downloadRight" >
                   <img src="/assets/images/Home_iPhone.png" alt="phone image" style={{height: '65%', marginLeft: '30px'}}/>
-                </Col>
+                </div>
               </Row>
               
             </div>
@@ -196,7 +195,8 @@ function Home(props) {
               <input type="text" className={styles.newsletter_input} placeholder="Enter your email" />
               <Button size="large" type="primary" >Subscribe</Button>
             </div>
-{/*             
+          
+          {/*             
             <Search
               style={{
                 width: '400px', 
@@ -205,7 +205,8 @@ function Home(props) {
               enterButton="Subscribe"
               size="large"
               onSearch={value => console.log(value)}
-            />                  */}
+            />                  
+          */}
 
           </div>{/* <!-- end of newsletter section --> */}
           
@@ -214,6 +215,51 @@ function Home(props) {
         </main>
 
       </div>
+
+      <style jsx>{
+        `
+        .downloadLeft{
+          text-align: right;
+          padding-top: 100px; 
+          padding-right: 30px; 
+          display: flex; 
+          align-items: center; 
+          flex-direction: column;
+          width: 50%;
+        }
+
+        .downloadLeft .header{
+          margin-left: 100px, 
+          color: var(--app-purple);
+        }
+
+        .downloadLeft .appStore, 
+        .downloadLeft .learnMoreButton{
+          align-self: flex-end;
+        }
+
+
+        @media screen and (max-width: 768px){
+          .downloadLeft{
+            text-align: center;
+            padding: 20px; 
+            width: 100%;
+          }
+          .downloadRight{
+            display: none;
+          }
+          .downloadLeft .appStore, 
+          .downloadLeft .learnMoreButton{
+            align-self: center;
+          }
+          .downloadLeft .header{
+            margin: 50px;
+            margin-top: 0px;
+            text-align: center;
+          }
+        }
+        `
+      }</style>
 
      
     </Scaffold>

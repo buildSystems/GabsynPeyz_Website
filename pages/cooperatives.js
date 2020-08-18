@@ -98,7 +98,7 @@ export default function Cooperatives() {
                 <div>
 
                     <div className="container">
-                        <div style={{width: '300px', position: 'absolute'}}>
+                        <div className="loansText" >
                             
                             <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>                        
                                 Is your Money Working for you?               
@@ -107,12 +107,12 @@ export default function Cooperatives() {
                                 Join a nationwwide clique of Technocrats, Entrepreneurs, Traders etc. and start saving with as low as 1000 Naira
                             </p>
                             
-                            <Link href="/loans#">
+                            {/* <Link href="/loans#">
                                 <Button size="large" type="primary" 
                                         style={{marginTop: '20px', paddingLeft: '30px', paddingRight: '30px'}}>
                                         LEARN MORE
                                 </Button>
-                            </Link>
+                            </Link> */}
                         </div>   
                     </div>
                     
@@ -120,7 +120,7 @@ export default function Cooperatives() {
 
                 <div>
                     <div className="container">
-                        <div style={{width: '300px', position: 'absolute'}}>
+                        <div className="loansText" >
                             
                             <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>                        
                                 Plan and Enjoy in Rainy days...           
@@ -129,12 +129,12 @@ export default function Cooperatives() {
                                 By considering opening a cooperative savings account today and start enjoying the benefits of financial freedom
                             </p>
                             
-                            <Link href="/loans#">
+                            {/* <Link href="/loans#">
                                 <Button size="large" type="primary" 
                                         style={{marginTop: '20px', paddingLeft: '30px', paddingRight: '30px'}}>
                                         LEARN MORE
                                 </Button>
-                            </Link>
+                            </Link> */}
                         </div>   
                     </div>                   
                 </div>{/*<!-- end of slide -->*/}
@@ -142,7 +142,7 @@ export default function Cooperatives() {
                 <div>
                     
                     <div className="container">
-                        <div style={{width: '300px', position: 'absolute'}}>
+                        <div className="loansText" >
                             
                             <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>                        
                                 With target savers account...                 
@@ -151,12 +151,12 @@ export default function Cooperatives() {
                                 Secure a better future for your children by opening a target savers account with as low as 1000 Naira
                             </p>
                             
-                            <Link href="/loans#">
+                            {/* <Link href="/loans#">
                                 <Button size="large" type="primary" 
                                         style={{marginTop: '20px', paddingLeft: '30px', paddingRight: '30px'}}>
                                         LEARN MORE
                                 </Button>
-                            </Link>
+                            </Link> */}
                         </div>   
                     </div>
                    
@@ -170,19 +170,7 @@ export default function Cooperatives() {
                                                 transform: 'translateX(-50%)',
                                                 height: '100%'}}>
 
-                {/* <div style={{width: '300px', position: 'absolute'}}>
-                    <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>Lorem ipsum dolor sit amet.</Title>
-                    <p style={{color: 'var(--app-purple)', marginBottom: '0px', lineHeight: '1.0rem'}}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis nibh fermentum at malesuada. Nisl sem cras id at ipsum nisl.
-                    </p>
-                    <Link href="/loans#">
-                        <Button size="large" type="primary" 
-                                style={{marginTop: '20px', paddingLeft: '30px', paddingRight: '30px'}}>
-                                LEARN MORE
-                        </Button>
-                    </Link>
-                </div>  */}
-
+               
                 <div className="calculator" >
                     
                     <Title level={4} style={{color: 'var(--app-purple)', fontSize: '14px'}}>Calculate Return on Savings</Title>
@@ -236,42 +224,7 @@ export default function Cooperatives() {
             <style jsx>
                 {
                     `  
-                    .calculator{
-                        background-color: white; 
-                        border-radius: 15px; 
-                        padding: 15px; 
-                        width: var(--calculator-width);
-                        position: absolute;
-                        bottom: 16px; 
-                        right: 0px;
-                        box-shadow: 2px 2px 5px rgba(0,0,0,.2);
-                    } 
-                    .calculator label, .calculator input, .calculator small{
-                        display: block;
-                        color: var(--app-purple);
-                    }    
-
-                    .calculator label{
-                        font-size: 10px;
-                    }
-
-                    .calculator input, .calculator select{
-                        width: 100%;
-                        border-radius: 5px;
-                        border: 1px solid var(--app-purple);
-                        padding-left: 5px;
-                        font-size: 12px;
-                        outline: none;
-                    }
                     
-                    .calculator small{
-                        margin-bottom: 5px;
-                    }
-
-                    .calculator .error{
-                        color: red;
-                    }
-
                     .ant-radio-wrapper{
                         font-size: 12px;
                     }

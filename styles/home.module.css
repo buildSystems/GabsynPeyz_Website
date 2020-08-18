@@ -2,7 +2,7 @@
 
 .home_background{
     background-image: url(/assets/images/backgrounds/Home_HeroImg.png);
-    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
@@ -10,7 +10,7 @@
 
 .home_background2{
     background-image: url(/assets/images/backgrounds/Home_Img2.png);
-    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
     background-size: cover;
     background-repeat: no-repeat;
     margin: 50px 0px 100px 0px;
@@ -18,7 +18,7 @@
 
 .home_background3{
     background-image: url(/assets/images/backgrounds/Home_MacB.png);
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
     background-size: 55% auto;
     background-position: 20px center;
     background-repeat: no-repeat;   
@@ -26,9 +26,7 @@
 
 .download_app{
     background-color: var(--greyish);
-    height: calc(100vh - 100px);
-    padding: 50px;
-    
+    padding: 50px;    
 }
 
 .newsletter{
