@@ -49,7 +49,7 @@ function Home(props) {
 
             <div className="container" style={{paddingTop: '150px', textAlign: 'center'}}>
               <Row>
-                <Col md={{span: 12, offset: 12}} >               
+                <Col md={{span: 12, offset: 12}}  style={{width: '100%'}} >               
 
                   <div className={clsx(styles.search_div, 'animate__animated', 'animate__slideInRight')}>
                     <input type="text" placeholder="Search" className={styles.search_input}/>
@@ -69,7 +69,7 @@ function Home(props) {
                     Our services include: 
                   </Text>
 
-                  <div className={clsx('animate__animated', 'animate__slideInRight')}>
+                  <div className={clsx('animate__animated', 'animate__slideInRight')} style={{width: '100%'}}>
                     <Service 
                         image="/assets/images/icons/Forms_LoanIcon.png" 
                         hoverImage="/assets/images/icons/Home_LoansIcon.png" 

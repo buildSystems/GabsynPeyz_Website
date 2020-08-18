@@ -79,6 +79,15 @@ const Service = (props:Props) => {
                     font-size: 16px;  
 
                 }
+
+                @media screen and (max-width: 768px){
+                    .aService img{
+                        display: block;
+                        margin: auto;
+                        width: 100px;
+                        margin-bottom: 20px;
+                    }
+                }
                 `
             }</style>
         </div>

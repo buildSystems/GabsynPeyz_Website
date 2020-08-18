@@ -161,19 +161,16 @@ button:hover{
 .loanSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
   background-image: url(/assets/images/backgrounds/Loans_HeroImg.png);
   background-size: cover;
-  background-position: left;
 }
 
 .loanSlides .ant-carousel .slick-list .slick-slide:nth-child(2){
   background-image: url(/assets/images/backgrounds/Loans_HeroImg2.png);
   background-size: cover;
-  background-position: left;
     
 }
 .loanSlides .ant-carousel .slick-list .slick-slide:nth-child(3){
   background-image: url(/assets/images/backgrounds/Loans_HeroImg3.png);
   background-size: cover;
-  background-position: left;
   
 }
 
@@ -188,19 +185,16 @@ button:hover{
 .investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
   background-image: url(/assets/images/backgrounds/Invstment_HeroImg.png);
   background-size: cover;
-  background-position: left;
 }
 
 .investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(2){
   background-image: url(/assets/images/backgrounds/Invstment_HeroImg2.png);
   background-size: cover;
-  background-position: left;
     
 }
 .investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(3){
   background-image: url(/assets/images/backgrounds/Invstment_HeroImg3.png);
   background-size: cover;
-  background-position: left;
   
 }
 
@@ -215,19 +209,16 @@ button:hover{
 .cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
   background-image: url(/assets/images/backgrounds/HeroImgCoop_.png);
   background-size: cover;
-  background-position: left;
 }
 
 .cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(2){
   background-image: url(/assets/images/backgrounds/HeroImg2Coop_.png);
   background-size: cover;
-  background-position: left;
     
 }
 .cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(3){
   background-image: url(/assets/images/backgrounds/HeroImg3Coop_.png);
   background-size: cover;
-  background-position: left;
   
 }
 
@@ -235,7 +226,6 @@ button:hover{
   height: 500px;
   background-image: url(/assets/images/backgrounds/Forms_HeroImg.png);
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .ant-modal-content{
@@ -399,4 +389,78 @@ button:hover{
     position: static;
     box-shadow: 2px 2px 5px rgba(0,0,0,.2);
   } 
+
+  
+.loanSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
+  background-image: url(/assets/images/backgrounds/Loans_HeroImg.png);
+  background-size: cover;
+  background-position: left;
+}
+
+.loanSlides .ant-carousel .slick-list .slick-slide:nth-child(2){
+  background-image: url(/assets/images/backgrounds/Loans_HeroImg2.png);
+  background-size: cover;
+  background-position: left;
+    
+}
+.loanSlides .ant-carousel .slick-list .slick-slide:nth-child(3){
+  background-image: url(/assets/images/backgrounds/Loans_HeroImg3.png);
+  background-size: cover;
+  background-position: left;
+  
+}
+
+/* Now for the investment slides */
+
+/* .investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
+  background-image: url(/assets/images/backgrounds/Invstment_HeroImg.png);
+  background-size: cover;
+  background-position: center;  
+} */
+
+.investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
+  background-image: url(/assets/images/backgrounds/Invstment_HeroImg.png);
+  background-size: cover;
+  background-position: left;
+}
+
+.investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(2){
+  background-image: url(/assets/images/backgrounds/Invstment_HeroImg2.png);
+  background-size: cover;
+  background-position: left;
+    
+}
+.investmentSlides .ant-carousel .slick-list .slick-slide:nth-child(3){
+  background-image: url(/assets/images/backgrounds/Invstment_HeroImg3.png);
+  background-size: cover;
+  background-position: left;
+  
+}
+
+/* Now for the cooperative slides */
+
+/* .cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
+  background-image: url(/assets/images/backgrounds/HeroImgCoop_.png);
+  background-size: cover;
+  background-position: center;  
+} */
+
+.cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(1){
+  background-image: url(/assets/images/backgrounds/HeroImgCoop_.png);
+  background-size: cover;
+  background-position: left;
+}
+
+.cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(2){
+  background-image: url(/assets/images/backgrounds/HeroImg2Coop_.png);
+  background-size: cover;
+  background-position: left;
+    
+}
+.cooperativeSlides .ant-carousel .slick-list .slick-slide:nth-child(3){
+  background-image: url(/assets/images/backgrounds/HeroImg3Coop_.png);
+  background-size: cover;
+  background-position: left;
+  
+}
 }
