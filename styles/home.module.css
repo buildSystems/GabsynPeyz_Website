@@ -20,7 +20,7 @@
     background-image: url(/assets/images/backgrounds/Home_MacB.png);
     min-height: calc(100vh - 100px);
     background-size: 55% auto;
-    background-position: 20px center;
+    background-position: 100px center;
     background-repeat: no-repeat;   
 }
 
