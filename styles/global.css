@@ -324,7 +324,7 @@ button:hover{
 .loansText{
   width: 300px;
   position: absolute; 
-  margin-bottom: 100px;
+  bottom: 150px;
 }
 
 .calculator{

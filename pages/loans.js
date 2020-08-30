@@ -17,6 +17,7 @@ import {
 
 import fetch from 'isomorphic-unfetch';
 import {BASE_PATH} from '../constants';
+import * as Constants from '../constants';
 
 import {
   SearchOutlined
@@ -307,10 +308,12 @@ export default function Loans() {
                             <p style={{color: 'var(--app-purple)', fontSize: '13px'}}>NGN {loanState.payment == 'Infinity' || loanState.payment == 'NaN' ? 0 : numberWithCommas(loanState.payment)}</p>
                         </Col>
                         <Col span={12} style={{textAlign: 'right'}}>
-                        <Button size="large" type="primary" 
-                                style={{padding: '5px 30px', marginTop: '10px'}}>
-                                APPLY NOW
-                        </Button>
+                        <a href={Constants.REGISTER}>
+                            <Button size="large" type="primary" 
+                                    style={{padding: '5px 30px', marginTop: '10px'}}>
+                                    APPLY NOW
+                            </Button>
+                        </a>
                         </Col>
                     </Row>
                      
