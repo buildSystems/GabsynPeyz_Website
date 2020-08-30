@@ -14,6 +14,7 @@ import {
   Radio,
   Carousel 
 } from 'antd';
+import * as Constants from '../constants';
 
 
 import {
@@ -210,10 +211,12 @@ export default function Cooperatives() {
                             <p style={{color: 'var(--app-purple)', fontSize: '12px'}}>NGN {cooperativeState.payment == 'Infinity' || cooperativeState.payment == 'NaN' ? 0 : numberWithCommas(cooperativeState.payment)}</p>
                         </Col>
                         <Col span={12} style={{textAlign: 'right'}}>
-                        <Button size="large" type="primary" 
-                                style={{paddingLeft: '30px', paddingRight: '30px'}}>
-                                APPLY NOW
-                        </Button>
+                        <a href={Constants.REGISTER}>
+                            <Button size="large" type="primary" 
+                                    style={{paddingLeft: '30px', paddingRight: '30px'}}>
+                                    APPLY NOW
+                            </Button>
+                        </a>
                         </Col>
                     </Row>
                      

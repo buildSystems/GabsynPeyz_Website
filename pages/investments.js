@@ -15,6 +15,8 @@ import {
   Carousel 
 } from 'antd';
 
+import * as Constants from '../constants';
+
 
 import {
   SearchOutlined
@@ -205,10 +207,12 @@ export default function Investments() {
                             <p style={{color: 'var(--app-purple)', fontSize: '13px'}}>NGN {investmentState.payment == 'Infinity' || investmentState.payment == 'NaN' ? 0 : numberWithCommas(investmentState.payment)}</p>
                         </Col>
                         <Col span={12} style={{textAlign: 'right'}}>
-                        <Button size="large" type="primary" 
-                                style={{padding: '5px 30px', marginTop: '10px'}}>
-                                APPLY NOW
-                        </Button>
+                        <a href={Constants.REGISTER}>
+                            <Button size="large" type="primary" 
+                                    style={{padding: '5px 30px', marginTop: '10px'}}>
+                                    APPLY NOW
+                            </Button>
+                        </a>
                         </Col>
                     </Row>
                      

@@ -652,10 +652,14 @@ const Navbar = (props:Props) => {
 
                 <img src="/assets/images/icons/entypo_menu.png"  alt="" className="hamburger" onClick={() => props.toggleDrawer()}/>
 
-                <div className="container" style={{textAlign: 'left'}}>
+                <div className="container" >
                     <Link href="/">
                         <img src="/assets/images/icons/GPlogo.png"  alt="" className="logo" onClick={() => router.push('/')} />
-                    </Link>                    
+                    </Link>  
+                    <div style={{display: "flex", alignItems: "flex-end", marginTop: "15px", textAlign: "right", width: "300px", height: "100% !important", float: "right"}}>
+                        <a href={Constants.LOGIN} className="navBtn navSignIn">SIGN IN</a>
+                        <a href={Constants.REGISTER} className="navBtn navSignUp">SIGN UP</a>
+                    </div>                  
                 </div>
 
             </nav>
@@ -1013,6 +1017,7 @@ const Navbar = (props:Props) => {
                 }
                 .logo{
                     height: 50px;
+                    marrgin-left: -60px;
                 }
 
                 .progressDiv{
@@ -1028,6 +1033,34 @@ const Navbar = (props:Props) => {
 
                 .progressDiv img{
                     height: 120px;
+                }
+
+                .navBtn{
+                    padding: 5px 15px;
+                    width: 100px;
+                    border-radius: 20px;
+                    border: 1px solid white;
+                    margin-left: 10px;
+                    transition: all 2s;
+                    text-align: center;
+                }
+
+                .navBtn.navSignIn{
+                    color: var(--app-purple);
+                    background-color: white;                   
+                }
+                .navBtn.navSignIn:hover{
+                    color: white;
+                    background-color: var(--app-purple);
+                }
+
+                .navBtn.navSignUp{
+                    color: white;
+                    background-color: transparent;
+                }
+                .navBtn.navSignUp:hover{
+                    color: var(--app-purple);
+                    background-color: white;
                 }
 
                 @media screen and (max-width: 768px){
