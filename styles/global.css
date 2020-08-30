@@ -221,6 +221,9 @@ button:hover{
   background-size: cover;
   
 }
+.ant-scrolling-effect{
+  width: 100% !important;
+}
 
 .apply_background{
   height: 500px;
@@ -323,8 +326,8 @@ button:hover{
 
 .loansText{
   width: 300px;
-  position: absolute; 
-  bottom: 150px;
+  position: static; 
+  margin-top: -200px;
 }
 
 .calculator{
