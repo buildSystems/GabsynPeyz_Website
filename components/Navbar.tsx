@@ -629,7 +629,7 @@ const Navbar = (props:Props) => {
                 <div className="modalMainDesc" >
                         <h4><strong>Requirements</strong></h4>
                         <div style={{textAlign: 'left'}}>
-                            <ul >
+                            <ul>
                                 <li>Fill Membership Registration Form Online/physically</li>
                                 <li>Provide ID Card, Passport Photograph, Utility Bill</li>
                                 <li>Pay Registration Fee: N1000</li>
@@ -641,7 +641,7 @@ const Navbar = (props:Props) => {
                                 <li>Not less than 18 years of age except in the case of an heir of a deceased member, and where the Director grants exemption from this qualification.</li>
                                 <li>Any other category of person(s) approved by the general body of the members as qualified to be members of the society.</li>
                                 <li>Any member who does not belong to any other society, the primary objects of which coincide with that of this society except with the permission of the Direct</li>
-                            </ul>
+                           </ul>
                         </div>
                     
                 </div>
@@ -656,7 +656,7 @@ const Navbar = (props:Props) => {
                     <Link href="/">
                         <img src="/assets/images/icons/GPlogo.png"  alt="" className="logo" onClick={() => router.push('/')} />
                     </Link>  
-                    <div style={{display: "flex", alignItems: "flex-end", marginTop: "15px", textAlign: "right", width: "300px", height: "100% !important", float: "right"}}>
+                    <div style={{display: "flex", alignItems: "flex-end", marginTop: "10px", textAlign: "right", width: "270px", height: "100% !important", float: "right"}}>
                         <a href={Constants.LOGIN} className="navBtn navSignIn">SIGN IN</a>
                         <a href={Constants.REGISTER} className="navBtn navSignUp">SIGN UP</a>
                     </div>                  
