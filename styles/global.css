@@ -231,6 +231,15 @@ button:hover{
   background-size: cover;
 }
 
+.about_us_background{
+  height: 500px;
+  background-image: url(/assets/images/backgrounds/Forms_HeroImg.png);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .ant-modal-content{
   text-align: center;  
 }

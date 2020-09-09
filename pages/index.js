@@ -138,7 +138,7 @@ function Home(props) {
                     <Paragraph ellipsis={{ rows: 6}} style={{marginTop: '10px'}}>
                     Gabsyn Peyzs Surulere Cooperative (Multipurpose) Society Ltd is a member owned indigenous society established by a set of young upward mobile entrepreneurs and professionals (men and women of integrity) in their respective fields ; the concept was to build a Synergy of both the formal and informal sectors in response to individual and collective socio-economic needs in order to fulfil purpose, thus the main objectives of the society is to help members with working capital , financial and risk management advisory services, housing, etc. to enable them develop multiple streams of income and achieve financial freedom...
                     </Paragraph>  
-                    <Link href="#">
+                    <Link href="/about-us">
                       <Button size="large" type="primary" 
                             style={{marginTop: '30px', paddingLeft: '30px', paddingRight: '30px'}}>
                               LEARN MORE

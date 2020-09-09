@@ -51,6 +51,14 @@ const Navbar = (props:Props) => {
         console.log('click ', e);
     };
 
+    const openPage = (page) => {
+        props.setProgressVisible(true);   
+        setTimeout(function(){
+            props.setProgressVisible(false);      
+            router.push(page);
+        }, 1000);
+    };
+
     let { current } = state;
 
     let router = useRouter();
@@ -734,7 +742,7 @@ const Navbar = (props:Props) => {
                                 <Menu.Item key="13" onClick={() => {setCooperative3ModalOpen(true)} }>GPL Platinum Coop Savings Account</Menu.Item>
                                 
                             </SubMenu>
-                            <Menu.Item key="20">
+                            <Menu.Item key="20" onClick={() => {openPage('/about-us')} }>
                                 <span>
                                     <BankOutlined />
                                     <span>Company</span>
@@ -755,16 +763,16 @@ const Navbar = (props:Props) => {
                                     </span>
                                 }
                             >
-                                <Menu.Item key="22">FAQ</Menu.Item>
-                                <Menu.Item key="23">Site map</Menu.Item>
-                                <Menu.Item key="24">Terms and Conditions</Menu.Item>
+                                <Menu.Item key="22" onClick={() => {openPage('/faq')} } >FAQ</Menu.Item>
+                                {/* <Menu.Item key="23">Site map</Menu.Item> */}
+                                <Menu.Item key="24" onClick={() => {openPage('/terms-and-conditions')} }>Terms and Conditions</Menu.Item>
                             </SubMenu>
-                            <Menu.Item key="25">
+                            {/* <Menu.Item key="25">
                                 <span>
                                     <UsergroupAddOutlined />
                                     <span>Careers</span>
                                 </span>
-                            </Menu.Item>
+                            </Menu.Item> */}
                         </Menu>
                         
                     )
