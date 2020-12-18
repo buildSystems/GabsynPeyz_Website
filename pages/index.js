@@ -97,28 +97,28 @@ function Home(props) {
 
             <div className={clsx("container", 'animate__animated', 'animate__slideInLeft')} style={{paddingTop: '50px'}}>
               <Row>
-                <Col md={{span: 12}}>  
+                <Col md={{span: 14}}>  
                     <Title level={4}> </Title>
                     <Title level={2} style={{textAlign: 'right'}}>Here are some of the reasons our customers trust us...</Title>
                     <ServiceItem 
                       logo="/assets/images/icons/trust.png" 
                       title="Why Choose Us?">
-                      We are a team of young professionals with a shared wealth of experience in various sectors of the economy who have come together to provide solutions to individuals and business.
+                      We are a team of young professionals with a shared wealth of experience in various sectors of the economy who have come together to provide solutions to individuals and businesses.
                     </ServiceItem>
                     <ServiceItem 
                       logo="/assets/images/icons/trust.png" 
                       title="What We Believe">
-                      We believe all goals can be achieved with the right kind of support. Because we believe so strongly in our clients, we listen to them, we understand them and we make it work for them!
+                      We believe all goals can be achieved with the right kind of support, because we listen to you, we understand you and your business and we make it work!
                     </ServiceItem>
                     <ServiceItem 
                       logo="/assets/images/icons/trust.png" 
                       title="What We Do">
-                      We provide creative tailor made Financial, Advisory and Logistics solutions to Individuals and businesses with a view to helping them grow. We provide Rent Advance to Landlords pending the actual receipt of rents.
+                      We provide bespoke Financial, Advisory and Logistics solutions to Individuals and businesses with a view to helping them grow. We also provide Rent Advance to Landlords pending the actual receipt of rents.
                     </ServiceItem>
                     <ServiceItem 
                       logo="/assets/images/icons/trust.png" 
                       title="Our Tenets">
-                      Flexible Solutions, Leadership, Integrity, Innovation, Reliability, Passion for Excellence
+                      Flexible Solutions <b>|</b> Leadership <b>|</b> Integrity <b>|</b> Innovation <b>|</b> Reliability <b>|</b> Passion for Excellence
                     </ServiceItem>
                     
 
@@ -156,7 +156,7 @@ function Home(props) {
             <div className="container" style={{paddingTop: 50, paddingBottom: 50}}>
               <Row >
                 <div className="downloadLeft" >
-                  <h1 className="header" >Download the Gabsyn Peysz Mobile App</h1>
+                  <h1 className="header" >Download the Gabsyn Peyzs Mobile App</h1>
                   <div className="appStore">
                     <a href="#" target="_blank">
                       <img src="/assets/images/Home_AppleStore.png" alt="appstore logo" style={{width: '160px'}}/>

@@ -18,7 +18,8 @@ import {
     BankOutlined,
     AuditOutlined,
     QuestionCircleOutlined,
-    UsergroupAddOutlined 
+    UsergroupAddOutlined,
+    LockFilled 
 } from '@ant-design/icons';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
@@ -662,11 +663,11 @@ const Navbar = (props:Props) => {
 
                 <div className="container" >
                     <Link href="/">
-                        <img src="/assets/images/icons/GPlogo.png"  alt="" className="logo" onClick={() => router.push('/')} />
+                        <img src="/assets/images/icons/GPlogo2.png"  alt="" className="logo" onClick={() => router.push('/')} />
                     </Link>  
                     <div style={{display: "flex", alignItems: "flex-end", marginTop: "10px", textAlign: "right", width: "270px", height: "100% !important", float: "right"}}>
-                        <a href={Constants.LOGIN} className="navBtn navSignIn">SIGN IN</a>
-                        <a href={Constants.REGISTER} className="navBtn navSignUp">SIGN UP</a>
+                        {/* <a href={Constants.LOGIN} className="navBtn navSignIn">SIGN IN</a> */}
+                        <a href={Constants.REGISTER} className="navBtn navSignUp"> <LockFilled /> Online Banking</a>
                     </div>                  
                 </div>
 
@@ -694,54 +695,28 @@ const Navbar = (props:Props) => {
                             mode="inline"
                             style={{backgroundColor: 'var(--site-purple) !important', width: 256 }}
                         >
-                                                       
-                            <SubMenu
-                                key="sub1"
-                                title={
-                                    <span>
-                                    {/* <img className="item_icon" src="/assets/images/icons/SideMenu_LoansIcon.png" alt="" /> */}
-                                    {/* <MailOutlined /> */}
-                                    <CreditCardOutlined />
+
+                            <Menu.Item key="sub1" onClick={() => {openPage('/loans')} }>
+                                <span>
+                                    <BankOutlined />
                                     <span>Loans</span>
-                                    </span>
-                                }
-                            >
-                                <Menu.Item key="2" onClick={() => {setLoansModalOpen(true)} }>Salary Earner Loan</Menu.Item>
-                                <Menu.Item key="3" onClick={() => {setLoans2ModalOpen(true)} }>Salary Advance Loan</Menu.Item>
-                                <Menu.Item key="4" onClick={() => {setLoans3ModalOpen(true)} }>Business Owner Loan</Menu.Item>
-                                <Menu.Item key="5" onClick={() => {setLoans4ModalOpen(true)} }>Micro Business Loan</Menu.Item>
-                                <Menu.Item key="6" onClick={() => {setLoans5ModalOpen(true)} }>Coorperative Loan</Menu.Item>
-                                
-                            </SubMenu>
-                            <SubMenu
-                                key="sub2"
-                                title={
-                                    <span>
+                                </span>
+                            </Menu.Item>
+
+                            <Menu.Item key="sub2" onClick={() => {openPage('/investments')} }>
+                                <span>
                                     <LineChartOutlined />
                                     <span>Investments</span>
-                                    </span>
-                                }
-                            >
-                                <Menu.Item key="7" onClick={() => {setInvestmentModalOpen(true)} }>GPL Paladium Income Fund</Menu.Item>
-                                <Menu.Item key="8" onClick={() => {setInvestment2ModalOpen(true)} }>GPL Platinum Income Fund</Menu.Item>
-                                <Menu.Item key="9" onClick={() => {setInvestment3ModalOpen(true)} }>GPL Pearl Income Fund</Menu.Item>
-                                <Menu.Item key="5" onClick={() => {setInvestment4ModalOpen(true)} }>GPL Detail Income Fund</Menu.Item>
-                                
-                            </SubMenu>
-                            <SubMenu
-                                key="sub3"
-                                title={
-                                    <span>
+                                </span>
+                            </Menu.Item>
+
+                            <Menu.Item key="sub3" onClick={() => {openPage('/cooperatives')} }>
+                                <span>
                                     <ApartmentOutlined />
                                     <span>Coorperatives</span>
-                                    </span>
-                                }
-                            >
-                                <Menu.Item key="11" onClick={() => {setCooperativeModalOpen(true)} }>GPL Gold Coop Savings Account</Menu.Item>
-                                <Menu.Item key="12" onClick={() => {setCooperative2ModalOpen(true)} }>GPL Diamond Coop Savings Account</Menu.Item>
-                                <Menu.Item key="13" onClick={() => {setCooperative3ModalOpen(true)} }>GPL Platinum Coop Savings Account</Menu.Item>
-                                
-                            </SubMenu>
+                                </span>
+                            </Menu.Item>                            
+                            
                             <Menu.Item key="20" onClick={() => {openPage('/about-us')} }>
                                 <span>
                                     <BankOutlined />
@@ -766,6 +741,7 @@ const Navbar = (props:Props) => {
                                 <Menu.Item key="22" onClick={() => {openPage('/faq')} } >FAQ</Menu.Item>
                                 {/* <Menu.Item key="23">Site map</Menu.Item> */}
                                 <Menu.Item key="24" onClick={() => {openPage('/terms-and-conditions')} }>Terms and Conditions</Menu.Item>
+                                <Menu.Item key="25" onClick={() => {openPage('/privacy-policy')} }>Privacy Policy</Menu.Item>
                             </SubMenu>
                             {/* <Menu.Item key="25">
                                 <span>
@@ -1045,10 +1021,11 @@ const Navbar = (props:Props) => {
 
                 .navBtn{
                     padding: 5px 15px;
-                    width: 100px;
+                    width: 150px;
                     border-radius: 20px;
                     border: 1px solid white;
-                    margin-left: 10px;
+                    margin-left: auto;
+                    margin-right: 50px;
                     transition: all 2s;
                     text-align: center;
                 }
@@ -1077,6 +1054,14 @@ const Navbar = (props:Props) => {
                         margin-left: 20px;
                         margin-right: 0px;  
                         height: 40px;               
+                    }
+
+                    .navBtn{
+                        margin-right: 0px;
+                    }
+
+                    .logo{
+                        display: none;
                     }
                 }
                 `}

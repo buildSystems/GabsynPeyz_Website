@@ -103,27 +103,30 @@ export default function ApplyForLoan() {
                     <span>Repayments</span> */}
                 </p>
                 <Collapse accordion>
-                    {
-                        currentFAQs == 'All' && (
-                            faqs.map((faq, index) => {
-                                return <Panel header={faq[1]} key={`faq-${faq[0]}-${index}`}>
-                                          <p>{faq[2]}</p>
-                                       </Panel>
-                            })
-                        )
-                        
-                    }
+                    
+                        {
+                            currentFAQs == 'All' && (
+                                faqs.map((faq, index) => {
+                                    return <Panel header={faq[1]} key={`faq-${faq[0]}-${index}`} style={{marginBottom: '15px'}}>
+                                            <p>{faq[2]}</p>
+                                        </Panel>
+                                    
+                                })
+                            )
+                            
+                        }
 
-                    {
-                        currentFAQs != 'All' && (
-                            faqs.map((faq, index) => {
-                                return faq[0] == currentFAQs && <Panel header={faq[1]} key={`faq-${faq[0]}-${index}`}>
-                                          <p>{faq[2]}</p>
-                                       </Panel>
-                            })
-                        )
-                        
-                    }
+                        {
+                            currentFAQs != 'All' && (
+                                faqs.map((faq, index) => {
+                                    return faq[0] == currentFAQs && <Panel header={faq[1]} key={`faq-${faq[0]}-${index}`}>
+                                            <p>{faq[2]}</p>
+                                        </Panel>
+                                })
+                            )
+                            
+                        }
+                    
 
                 </Collapse>
 
