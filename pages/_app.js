@@ -10,7 +10,8 @@ import {Provider} from 'react-redux';
 let store = createStore(
                    combineReducers(
                     {
-                        drawerReducer:reducers.drawerReducer, 
+                        drawerOpenReducer:reducers.drawerOpenReducer, 
+                        drawerCloseReducer:reducers.drawerCloseReducer, 
                         setUserReducer:reducers.setUserReducer,
                         setProgressReducer:reducers.setProgressReducer
                     }       

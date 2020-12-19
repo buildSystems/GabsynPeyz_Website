@@ -84,17 +84,22 @@ export default function ApplyForLoan() {
 
         <main>
             <Navbar />
-            <div className="about_us_background">
+            <div className="faq_background">
 
-                <h1 style={{color: "white", backgroundColor: "var(--app-purple)", padding: "8px 16px"}}>FAQ</h1>
+                {/* <h1 style={{color: "white", backgroundColor: "var(--app-purple)", padding: "8px 16px"}}>FAQ</h1> */}
                 
             </div>
 
-            <div className="container" style={{marginTop: 100, marginBottom: 100}}>
+            <div className="container" style={{marginTop: 50, marginBottom: 100}}>
+                <Title level={2} style={{width: "100%", textAlign: "center", marginBottom: "50px"}}>
+                    FAQs
+                </Title>
                 <p className="filters">
                     {
                         categories.map((category, index) => {
-                            return <span {...category == currentFAQs ? `className="active"` : `className="filter"`} onClick={() => setCurrentFAQs(category)}>{category} / </span>
+                            console.log(`Current category: ${categories[index]}`);
+                            return <span {...categories[index] == currentFAQs ? `className="active"` : `className="filter"`} 
+                                    onClick={() => setCurrentFAQs(categories[index])}>{category} | </span>
                         })
                     }
                     
@@ -107,8 +112,9 @@ export default function ApplyForLoan() {
                         {
                             currentFAQs == 'All' && (
                                 faqs.map((faq, index) => {
-                                    return <Panel header={faq[1]} key={`faq-${faq[0]}-${index}`} style={{marginBottom: '15px'}}>
-                                            <p>{faq[2]}</p>
+                                    return <Panel header={faq[1]} key={`faq-${faq[0]}-${index}`} 
+                                                style={{textAlign: 'center', fontWeight: 'bold', fontSize: '20px', marginBottom: '15px'}}>
+                                            <p style={{textAlign: 'center', fontWeight: 'normal', fontSize: '16px'}} >{faq[2]}</p>
                                         </Panel>
                                     
                                 })
@@ -119,8 +125,9 @@ export default function ApplyForLoan() {
                         {
                             currentFAQs != 'All' && (
                                 faqs.map((faq, index) => {
-                                    return faq[0] == currentFAQs && <Panel header={faq[1]} key={`faq-${faq[0]}-${index}`}>
-                                            <p>{faq[2]}</p>
+                                    return faq[0] == currentFAQs && <Panel header={faq[1]} key={`faq-${faq[0]}-${index}`} 
+                                            style={{textAlign: 'center', fontWeight: 'bold', fontSize: '20px', marginBottom: '15px'}}>
+                                            <p style={{textAlign: 'center', fontWeight: 'normal', fontSize: '16px'}} >{faq[2]}</p>
                                         </Panel>
                                 })
                             )
@@ -133,15 +140,22 @@ export default function ApplyForLoan() {
                 <style jsx>
                     {
                         `
+                            .filters{
+                                width: 100%;
+                                text-align:  center;
+                            }
+
                             .filters span:hover{
-                                color: blue;
+                                color: purple;
                                 cursor: pointer;
+                                fonnt-size: 20px;
                                 text-decoration: underline;
                             }
 
                             .filters .active{
-                                color: blue;
+                                color: purple;
                                 font-weight: bold;
+                                fonnt-size: 20px;
                                 text-decoration: underline;
                             }
                         `

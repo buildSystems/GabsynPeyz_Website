@@ -65,7 +65,7 @@ function Home(props) {
                     
                   </div>
 
-                  <Text className={clsx('animate__animated', 'animate__slideInRight')} style={{marginTop: '50px', width: '100%', fontWeight: 'bold'}}>
+                  <Text className={clsx('animate__animated', 'animate__slideInRight')} style={{fontSize: "18px", marginTop: '50px', width: '100%', fontWeight: 'bold'}}>
                     Our services include: 
                   </Text>
 

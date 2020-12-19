@@ -15,6 +15,7 @@ import {
   Carousel 
 } from 'antd';
 import * as Constants from '../constants';
+import "../components/Navbar";
 
 
 import {
@@ -23,6 +24,7 @@ import {
 
 const {Title, Text,  Paragraph} = Typography;
 
+var actualAmount = 0;
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -57,10 +59,19 @@ export default function Cooperatives() {
          }
      
          const handleAmountChange = (event) => {
-            console.log('Amount change', event.target.value);
+            
+            var val = event.target.value.replace(/(\..*)\./g, '$1') //Replace Multiple Dot(.)
+            actualAmount = Number(val.replace(/,/g, ""));
+
+            console.log(`current value of  x: ${actualAmount}`);
+
+            var formatter = new Intl.NumberFormat("en-US");
+            cooperativeState.amount = formatter.format(actualAmount);
+
+
             setCooperativeState({
-                    ...cooperativeState, amount: event.target.value, 
-                    payment: ((parseInt(event.target.value) * parseFloat(cooperativeState.rate) * parseInt(cooperativeState.tenure)/ 100)).toFixed(2)
+                ...cooperativeState,  
+                payment: ((parseInt(actualAmount) * parseFloat(cooperativeState.rate) * parseInt(cooperativeState.tenure)/ 100)).toFixed(2)
             });
             
         }
@@ -69,7 +80,7 @@ export default function Cooperatives() {
             console.log('Tenure change', event.target.value);
             setCooperativeState({
                 ...cooperativeState, tenure: event.target.value, 
-                payment: ((parseInt(cooperativeState.amount) * parseFloat(cooperativeState.rate) * parseInt(event.target.value) / 100 )).toFixed(2)
+                payment: ((parseInt(actualAmount) * parseFloat(cooperativeState.rate) * parseInt(event.target.value) / 100 )).toFixed(2)
             });
         }
     
@@ -77,7 +88,7 @@ export default function Cooperatives() {
             console.log('Rate change', event.target.value);
             setCooperativeState({
                 ...cooperativeState, rate: event.target.value, 
-                payment: ((parseInt(cooperativeState.amount) * parseFloat(event.target.value) * parseInt(cooperativeState.tenure) / 100 )).toFixed(2)
+                payment: ((parseInt(actualAmount) * parseFloat(event.target.value) * parseInt(cooperativeState.tenure) / 100 )).toFixed(2)
             });
         }
 
@@ -196,7 +207,7 @@ export default function Cooperatives() {
                     </select>
                     
                     <label for="loan_amount">Amount</label>
-                    <input type="number" min="0" id="loan_amount" placeholder="e.g. 100,000" value={cooperativeState.amount} onChange={handleAmountChange} />
+                    <input type="text" id="loan_amount" placeholder="e.g. 100,000" value={cooperativeState.amount} onChange={handleAmountChange} />
                     <small class="error" id="loan_amount_error"></small>
 
                     <label for="loan_months">Months</label>
@@ -214,7 +225,7 @@ export default function Cooperatives() {
                         <a href={Constants.REGISTER}>
                             <Button size="large" type="primary" 
                                     style={{paddingLeft: '30px', paddingRight: '30px'}}>
-                                    APPLY NOW
+                                    Save Now
                             </Button>
                         </a>
                         </Col>

@@ -23,12 +23,16 @@ import {
   SearchOutlined
 } from '@ant-design/icons'
 
+import "../components/Navbar";
+
 const {Title, Text,  Paragraph} = Typography;
 
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+var actualAmount = 0;
 
 export default function Loans() {
 
@@ -45,114 +49,117 @@ export default function Loans() {
     //     setCurrentBody(bodies[count % bodies.length]);
     //     count++;
     // }, 3000);
-        
 
-  const loanTypes =  [
-    {
-        "name": "Salary Earner Loan",
-        "APR rate": 97.1128,
-        "flat rate": 5.0
-    },
-    {
-        "name":"Salary Advance (1 Month)",
-        "APR rate": 97.1128,
-        "flat rate": 5.0
-    }, 
-    {
-        "name": "Business/SME Loan",
-        "APR rate":130.864,
-        "flat rate": 8.5
-    },
-    {
-        "name":"Micro Business Loan",
-        "APR rate": 130.864,
-        "flat rate": 10.0
-    },
-    {
-        "name":"Co-operative Loan",
-        "APR rate":70.26,
-        "flat rate": 3.5
-    }, 
-    // {
-    //     "name": "Asset-Backed Loan",
-    //     "APR rate":"130.864",
-    //     "flat rate": 7.0
-    // }, 
+    //This is the actual amount entered by user
     
-    // {
-    //     "name":"Asset-Financing Loan",
-    //     "APR rate": 130.864,
-    //     "flat rate": 7.0
-    // }, 
-    // {
-    //     "name":"Rent Advance Loan",
-    //     "APR rate": 97.1128,
-    //     "flat rate": 5.0
-    // }, 
-    
-    // {
-    //     "name":"One-Month Loan",
-    //     "APR rate": 97.1128,
-    //     "flat rate": 5.0
-    // }, 
-    
-    // {
-    //     "name":"Staff Loan",
-    //     "APR rate":60.95,
-    //     "flat rate": 3.0
-    // },
-    // {
-    //     "name":"Agricultural Loan",
-    //     "APR rate":97.1128,
-    //     "flat rate": 5.0
-    // }, 
-    // {
-    //     "name":"Personal Loan",
-    //     "APR rate": 97.1128,
-    //     "flat rate": 5.0
-    // }, 
-    // {
-    //     "name":"Returning Client Loan",
-    //     "APR rate": 79.384,
-    //     "flat rate": 4.0
-    // },
-    // {
-    //     "name":"Public Sector Loan",
-    //     "APR rate": 114.2455,
-    //     "flat rate": 6.0
-    // }, 
-    
-    // {
-    //     "name":"School Fee",
-    //     "APR rate": 106.0026,
-    //     "flat rate": 5.5
-    // },
-    // {
-    //     "name":"Loan Refinancing",
-    //     "APR rate": 130.864,
-    //     "flat rate": 7.0
-    // }, 
-    // {
-    //     "name":"Rate A+",
-    //     "APR rate": 97.1128,
-    //     "flat rate": 5.0
-    // }, 
-    // {
-    //     "name":"Rate A",
-    //     "APR rate": 97.1128,            
-    //     "flat rate": 5.0
-    // },
-    // {
-    //     "name":"Rate B",
-    //     "APR rate": 106.0026,
-    //     "flat rate": 5.5
-    // }, 
-    // {
-    //     "name":"Rate C",
-    //     "APR rate": 120.51,
-    //     "flat rate": 6.5
-    // }
-  ];
+      
+
+    const loanTypes =  [
+        {
+            "name": "Salary Earner Loan",
+            "APR rate": 97.1128,
+            "flat rate": 5.0
+        },
+        {
+            "name":"Salary Advance (1 Month)",
+            "APR rate": 97.1128,
+            "flat rate": 5.0
+        }, 
+        {
+            "name": "Business/SME Loan",
+            "APR rate":130.864,
+            "flat rate": 8.5
+        },
+        {
+            "name":"Micro Business Loan",
+            "APR rate": 130.864,
+            "flat rate": 10.0
+        },
+        {
+            "name":"Co-operative Loan",
+            "APR rate":70.26,
+            "flat rate": 4.5
+        }, 
+        // {
+        //     "name": "Asset-Backed Loan",
+        //     "APR rate":"130.864",
+        //     "flat rate": 7.0
+        // }, 
+        
+        // {
+        //     "name":"Asset-Financing Loan",
+        //     "APR rate": 130.864,
+        //     "flat rate": 7.0
+        // }, 
+        // {
+        //     "name":"Rent Advance Loan",
+        //     "APR rate": 97.1128,
+        //     "flat rate": 5.0
+        // }, 
+        
+        // {
+        //     "name":"One-Month Loan",
+        //     "APR rate": 97.1128,
+        //     "flat rate": 5.0
+        // }, 
+        
+        // {
+        //     "name":"Staff Loan",
+        //     "APR rate":60.95,
+        //     "flat rate": 3.0
+        // },
+        // {
+        //     "name":"Agricultural Loan",
+        //     "APR rate":97.1128,
+        //     "flat rate": 5.0
+        // }, 
+        // {
+        //     "name":"Personal Loan",
+        //     "APR rate": 97.1128,
+        //     "flat rate": 5.0
+        // }, 
+        // {
+        //     "name":"Returning Client Loan",
+        //     "APR rate": 79.384,
+        //     "flat rate": 4.0
+        // },
+        // {
+        //     "name":"Public Sector Loan",
+        //     "APR rate": 114.2455,
+        //     "flat rate": 6.0
+        // }, 
+        
+        // {
+        //     "name":"School Fee",
+        //     "APR rate": 106.0026,
+        //     "flat rate": 5.5
+        // },
+        // {
+        //     "name":"Loan Refinancing",
+        //     "APR rate": 130.864,
+        //     "flat rate": 7.0
+        // }, 
+        // {
+        //     "name":"Rate A+",
+        //     "APR rate": 97.1128,
+        //     "flat rate": 5.0
+        // }, 
+        // {
+        //     "name":"Rate A",
+        //     "APR rate": 97.1128,            
+        //     "flat rate": 5.0
+        // },
+        // {
+        //     "name":"Rate B",
+        //     "APR rate": 106.0026,
+        //     "flat rate": 5.5
+        // }, 
+        // {
+        //     "name":"Rate C",
+        //     "APR rate": 120.51,
+        //     "flat rate": 6.5
+        // }
+    ];
 
     let [loanState, setLoanState] = useState({amount:'', tenure:'', rate:0, payment:0});
 
@@ -160,25 +167,55 @@ export default function Loans() {
         return parseInt(amount) + parseInt(amount) * parseInt(rate) * parseInt(tenure) / 100; 
     }
 
-    const handleAmountChange = (event) => {
+    const handleAmountChange = (event) => {        
+        
+        // -- Stop cursor jumping when formatting number in React
+     
+        var val = event.target.value.replace(/(\..*)\./g, '$1') //Replace Multiple Dot(.)
+        actualAmount = Number(val.replace(/,/g, ""));
+
+        console.log(`current value of  x: ${actualAmount}`);
+
+        var formatter = new Intl.NumberFormat("en-US");
+        loanState.amount = formatter.format(actualAmount);
+
         setLoanState({
-                ...loanState, amount: event.target.value, 
-                payment: ((parseInt(event.target.value) + parseInt(event.target.value) * parseFloat(loanState.rate) * parseInt(loanState.tenure) / 100 ) / parseInt(loanState.tenure)).toFixed(2)
+        ...loanState,
+        payment: ((parseInt(actualAmount) + parseInt(actualAmount) * parseFloat(loanState.rate) * parseInt(loanState.tenure) / 100) / parseInt(loanState.tenure)).toFixed(2)
         });
+
+        // if (loanState.amount != x) {
+
+        //    var formatter = new Intl.NumberFormat("en-US");
+        //    loanState.amount = formatter.format(x);
+
+        //    setLoanState({
+        //     ...loanState, 
+        //     payment: ((parseInt(x) + parseInt(x) * parseFloat(loanState.rate) * parseInt(loanState.tenure) / 100) / parseInt(loanState.tenure)).toFixed(2)
+        //    });
+           
+        // }else{
+        //     setLoanState({
+        //         ...loanState, amount: x, 
+        //         payment: ((parseInt(x) + parseInt(x) * parseFloat(loanState.rate) * parseInt(loanState.tenure) / 100) / parseInt(loanState.tenure)).toFixed(2)
+        //        });
+        // }
+
+        
         
     }
 
     const handleTenureChange = (event) => {
         setLoanState({
             ...loanState, tenure: event.target.value, 
-            payment: ((parseInt(loanState.amount) + parseInt(loanState.amount) * parseFloat(loanState.rate) * parseInt(event.target.value) / 100  ) / parseInt(event.target.value)).toFixed(2)
+            payment: ((parseInt(actualAmount) + parseInt(actualAmount) * parseFloat(loanState.rate) * parseInt(event.target.value) / 100  ) / parseInt(event.target.value)).toFixed(2)
         });
     }
 
     const handleRateChange = (event) => {
         setLoanState({
             ...loanState, rate: event.target.value, 
-            payment: ((parseInt(loanState.amount) + parseInt(loanState.amount) * parseFloat(event.target.value) * parseInt(loanState.tenure) / 100) / parseInt(loanState.tenure) ).toFixed(2)
+            payment: ((parseInt(actualAmount) + parseInt(actualAmount) * parseFloat(event.target.value) * parseInt(loanState.tenure) / 100) / parseInt(loanState.tenure) ).toFixed(2)
         });
     }
 
@@ -295,7 +332,7 @@ export default function Loans() {
                     </select>
                     
                     <label htmlFor="loan_amount">Amount</label>
-                    <input type="number" min="0" id="loan_amount" placeholder="e.g. 100,000"  value={loanState.amount} onChange={handleAmountChange}/>
+                    <input type="text" id="loan_amount" placeholder="e.g. 100,000"  value={loanState.amount} onChange={handleAmountChange}/>
                     <small className="error" id="loan_amount_error"></small>
 
                     <label htmlFor="loan_months">Months</label>
@@ -311,7 +348,7 @@ export default function Loans() {
                         <a href={Constants.REGISTER}>
                             <Button size="large" type="primary" 
                                     style={{padding: '5px 30px', marginTop: '10px'}}>
-                                    APPLY NOW
+                                    Apply Now
                             </Button>
                         </a>
                         </Col>

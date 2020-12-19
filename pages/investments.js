@@ -17,6 +17,8 @@ import {
 
 import * as Constants from '../constants';
 
+import "../components/Navbar";
+
 
 import {
   SearchOutlined
@@ -27,6 +29,8 @@ const {Title, Text,  Paragraph} = Typography;
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+var actualAmount = 0;
 
 export default function Investments() {
 
@@ -60,9 +64,18 @@ export default function Investments() {
         }
     
         const handleAmountChange = (event) => {
+
+            var val = event.target.value.replace(/(\..*)\./g, '$1') //Replace Multiple Dot(.)
+            actualAmount = Number(val.replace(/,/g, ""));
+
+            console.log(`current value of  x: ${actualAmount}`);
+
+            var formatter = new Intl.NumberFormat("en-US");
+            investmentState.amount = formatter.format(actualAmount);
+
             setInvestmentState({
-                    ...investmentState, amount: event.target.value, 
-                    payment: ((parseInt(event.target.value) * parseFloat(investmentState.rate) * parseInt(investmentState.tenure) / 100 )).toFixed(2)
+                    ...investmentState,  
+                    payment: ((parseInt(actualAmount) * parseFloat(investmentState.rate) * parseInt(investmentState.tenure) / 100 )).toFixed(2)
             });
             
         }
@@ -70,14 +83,14 @@ export default function Investments() {
         const handleTenureChange = (event) => {
             setInvestmentState({
                 ...investmentState, tenure: event.target.value, 
-                payment: ((parseInt(investmentState.amount) * parseFloat(investmentState.rate) * parseInt(event.target.value) / 100  )).toFixed(2)
+                payment: ((parseInt(actualAmount) * parseFloat(investmentState.rate) * parseInt(event.target.value) / 100  )).toFixed(2)
             });
         }
     
         const handleRateChange = (event) => {
             setInvestmentState({
                 ...investmentState, rate: event.target.value, 
-                payment: ((parseInt(investmentState.amount) * parseFloat(event.target.value) * parseInt(investmentState.tenure) / 100) ).toFixed(2)
+                payment: ((parseInt(actualAmount) * parseFloat(event.target.value) * parseInt(investmentState.tenure) / 100) ).toFixed(2)
             });
         }
 
@@ -193,7 +206,7 @@ export default function Investments() {
 
                     
                     <label for="loan_amount">Amount</label>
-                    <input type="number" min="0" id="loan_amount" placeholder="e.g. 100,000" value={investmentState.amount} onChange={handleAmountChange}/>
+                    <input type="text" id="loan_amount" placeholder="e.g. 100,000" value={investmentState.amount} onChange={handleAmountChange}/>
                     <small class="error" id="loan_amount_error"></small>
 
                     <label for="loan_months">Months</label>
@@ -210,7 +223,7 @@ export default function Investments() {
                         <a href={Constants.REGISTER}>
                             <Button size="large" type="primary" 
                                     style={{padding: '5px 30px', marginTop: '10px'}}>
-                                    APPLY NOW
+                                    Invest Now                                    
                             </Button>
                         </a>
                         </Col>

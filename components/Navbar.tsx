@@ -37,12 +37,14 @@ interface Props {
     progressVisible: boolean,
     loggedInUser: any,
     setCurrentUser?: () => void,
-    toggleDrawer? : () => void,
+    openDrawer? : () => void,
+    closeDrawer? : () => void,
     setProgressVisible? : (visible) => void
 }
 
 const Navbar = (props:Props) => {
 
+    var [drawerVisible, setDrawerVisible] = useState(false);
     
     let state = {
         current: 'mail',
@@ -57,7 +59,7 @@ const Navbar = (props:Props) => {
         setTimeout(function(){
             props.setProgressVisible(false);      
             router.push(page);
-        }, 1000);
+        }, 3000);
     };
 
     let { current } = state;
@@ -87,17 +89,30 @@ const Navbar = (props:Props) => {
         setLoans3ModalOpen(false); 
         props.setProgressVisible(true); 
         setTimeout(function(){
-            props.toggleDrawer();
+            if(props.drawerVisible)
+            props.drawerVisible = !props.drawerVisible;
             // router.push(Constants.REGISTER)
             // location = Constants.REGISTER;
-        }, 1000);
+        }, 3000);
         setTimeout(function(){            
             props.setProgressVisible(false);             
         }, 2000);
     }
 
 
-    console.log('Constants.REGISTER:', Constants.REGISTER);
+    // console.log('Constants.REGISTER:', Constants.REGISTER);
+
+    function getButtonText(){
+        if(router.pathname == '/loans')
+            return " Apply Now";
+        else if(router.pathname == '/investments')
+            return " Invest Now";
+        else if(router.pathname == '/cooperatives')
+            return " Save Now";
+        else
+            return " Online Banking";
+
+    }
         
     return (
         <div>
@@ -659,7 +674,22 @@ const Navbar = (props:Props) => {
 
             <nav className='nav'>
 
-                <img src="/assets/images/icons/entypo_menu.png"  alt="" className="hamburger" onClick={() => props.toggleDrawer()}/>
+                {
+                   (router.pathname == '/about-us' ||
+                    router.pathname == '/faq' ||
+                    router.pathname == '/terms-and-conditions' ||
+                    router.pathname == '/privacy-policy')
+                    && <img src="/assets/images/icons/back_arrow.png"  alt="" className="hamburger" onClick={() => openPage('/')}/>
+                }
+
+{
+                    !(router.pathname == '/about-us' ||
+                    router.pathname == '/faq' ||
+                    router.pathname == '/terms-and-conditions' ||
+                    router.pathname == '/privacy-policy') 
+                    && <img src="/assets/images/icons/entypo_menu.png"  alt="" className="hamburger" onClick={() => setDrawerVisible(true)}/>
+                }
+                
 
                 <div className="container" >
                     <Link href="/">
@@ -667,7 +697,12 @@ const Navbar = (props:Props) => {
                     </Link>  
                     <div style={{display: "flex", alignItems: "flex-end", marginTop: "10px", textAlign: "right", width: "270px", height: "100% !important", float: "right"}}>
                         {/* <a href={Constants.LOGIN} className="navBtn navSignIn">SIGN IN</a> */}
-                        <a href={Constants.REGISTER} className="navBtn navSignUp"> <LockFilled /> Online Banking</a>
+                        <a href={Constants.REGISTER} className="navBtn navSignUp"> <LockFilled /> 
+                        {                            
+                            getButtonText()
+                        }
+                        
+                        </a>
                     </div>                  
                 </div>
 
@@ -677,9 +712,16 @@ const Navbar = (props:Props) => {
                 // title="Basic Drawer"
                 placement="left"
                 closable={false}
-                onClose={props.toggleDrawer}
-                visible={props.drawerVisible}
-                style={{padding: '0px !important', backgroundColor: 'var(--site-purple) !important'}}
+                onClose={() => setDrawerVisible(false)}
+                visible={drawerVisible}
+                style={{
+                        padding: '0px !important', 
+                        backgroundColor: 'var(--site-purple) !important', 
+                        // display: router.pathname == '/about-us' ||
+                        //             router.pathname == '/faq' ||
+                        //             router.pathname == '/terms-and-conditions' ||
+                        //             router.pathname == '/privacy-policy' ? 'none' : 'block'
+                    }}
             >
                 <div className="drawerContent">
                     <h4 style={{color: 'white', fontSize: '12px', position: 'absolute', bottom: '30px'}}>The Gabsyn Peyzs</h4>
@@ -723,12 +765,14 @@ const Navbar = (props:Props) => {
                                     <span>Company</span>
                                 </span>
                             </Menu.Item>
-                            {/* <Menu.Item key="21">
+                            <Menu.Item key="26">
                                 <span>
-                                    <AuditOutlined />
-                                    <span>Blog</span>
+                                    <BankOutlined />
+                                    <a href="http://161.35.175.18/user/register" style={{color: 'white'}}><span>Investors Forum</span></a>
                                 </span>
-                            </Menu.Item> */}
+                            </Menu.Item>
+                            {/* <Divider style={{backgroundColor: 'rgba(255, 255, 255, .5)'}} /> */}
+                            <hr style={{backgroundColor: 'rgba(255, 255, 255, .3)'}} />
                             <SubMenu
                                 key="sub4"
                                 title={
@@ -749,6 +793,7 @@ const Navbar = (props:Props) => {
                                     <span>Careers</span>
                                 </span>
                             </Menu.Item> */}
+                            
                         </Menu>
                         
                     )
@@ -765,7 +810,7 @@ const Navbar = (props:Props) => {
                         >
                             <Menu.Item key="1">
                                 <Link href="/">
-                                    <span onClick={props.toggleDrawer}>
+                                    <span onClick={props.closeDrawer}>
                                         <SettingOutlined />
                                         <span>Home</span>
                                     </span>
@@ -803,6 +848,7 @@ const Navbar = (props:Props) => {
                                     <span>Blog</span>
                                 </span>
                             </Menu.Item> */}
+                            <hr style={{backgroundColor: 'rgba(255, 255, 255, .3)'}} />
                             <SubMenu
                                 key="sub4"
                                 title={
@@ -812,16 +858,17 @@ const Navbar = (props:Props) => {
                                     </span>
                                 }
                             >
-                                <Menu.Item key="22">FAQ</Menu.Item>
-                                <Menu.Item key="23">Site map</Menu.Item>
-                                <Menu.Item key="24">Terms and Conditions</Menu.Item>
+                                <Menu.Item key="22" onClick={() => {openPage('/faq')} } >FAQ</Menu.Item>
+                                {/* <Menu.Item key="23">Site map</Menu.Item> */}
+                                <Menu.Item key="24" onClick={() => {openPage('/terms-and-conditions')} }>Terms and Conditions</Menu.Item>
+                                <Menu.Item key="25" onClick={() => {openPage('/privacy-policy')} }>Privacy Policy</Menu.Item>
                             </SubMenu>
-                            <Menu.Item key="25">
+                            {/* <Menu.Item key="25">
                                 <span>
                                     <UsergroupAddOutlined />
                                     <span>Careers</span>
                                 </span>
-                            </Menu.Item>
+                            </Menu.Item> */}
                         </Menu>
                         
                     )
@@ -838,7 +885,7 @@ const Navbar = (props:Props) => {
                         >
                             <Menu.Item key="1">
                                 <Link href="/">
-                                    <span onClick={props.toggleDrawer}>
+                                    <span onClick={props.closeDrawer}>
                                         <SettingOutlined />
                                         <span>Home</span>
                                     </span>
@@ -867,12 +914,19 @@ const Navbar = (props:Props) => {
                                     <span>Company</span>
                                 </span>
                             </Menu.Item>
+                            <Menu.Item key="26">
+                                <span>
+                                    <BankOutlined />
+                                    <a href="http://161.35.175.18/user/register" style={{color: 'white'}}><span>Investors Forum</span></a>
+                                </span>
+                            </Menu.Item>
                             {/* <Menu.Item key="21">
                                 <span>
                                     <AuditOutlined />
                                     <span>Blog</span>
                                 </span>
                             </Menu.Item> */}
+                            <hr style={{backgroundColor: 'rgba(255, 255, 255, .3)'}} />
                             <SubMenu
                                 key="sub4"
                                 title={
@@ -882,16 +936,11 @@ const Navbar = (props:Props) => {
                                     </span>
                                 }
                             >
-                                <Menu.Item key="22">FAQ</Menu.Item>
-                                <Menu.Item key="23">Site map</Menu.Item>
-                                <Menu.Item key="24">Terms and Conditions</Menu.Item>
+                                <Menu.Item key="22" onClick={() => {openPage('/faq')} } >FAQ</Menu.Item>
+                                {/* <Menu.Item key="23">Site map</Menu.Item> */}
+                                <Menu.Item key="24" onClick={() => {openPage('/terms-and-conditions')} }>Terms and Conditions</Menu.Item>
+                                <Menu.Item key="25" onClick={() => {openPage('/privacy-policy')} }>Privacy Policy</Menu.Item>
                             </SubMenu>
-                            <Menu.Item key="25">
-                                <span>
-                                    <UsergroupAddOutlined />
-                                    <span>Careers</span>
-                                </span>
-                            </Menu.Item>
                         </Menu>
                         
                     )
@@ -908,7 +957,7 @@ const Navbar = (props:Props) => {
                         >
                             <Menu.Item key="1">
                                 <Link href="/">
-                                    <span onClick={props.toggleDrawer}>
+                                    <span onClick={props.closeDrawer}>
                                         <SettingOutlined />
                                         <span>Home</span>
                                     </span>
@@ -956,12 +1005,12 @@ const Navbar = (props:Props) => {
                                 <Menu.Item key="23">Site map</Menu.Item>
                                 <Menu.Item key="24">Terms and Conditions</Menu.Item>
                             </SubMenu>
-                            <Menu.Item key="25">
+                            {/* <Menu.Item key="25">
                                 <span>
                                     <UsergroupAddOutlined />
                                     <span>Careers</span>
                                 </span>
-                            </Menu.Item>
+                            </Menu.Item> */}
                         </Menu>
                         
                     )

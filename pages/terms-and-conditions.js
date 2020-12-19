@@ -35,12 +35,10 @@ export default function ApplyForLoan() {
 
         <main>
             <Navbar />
-            <div className="about_us_background" style={{flexDirection: 'column'}}>
+            <div className="terms_and_conditions_background" style={{flexDirection: 'column'}}>
 
-                <h1 style={{color: "white", backgroundColor: "var(--app-purple)", padding: "8px 16px"}}>Terms and Conditions</h1>
-                <Paragraph ellipsis={{rows: 6, expandable: true}} style={{margin: "50px auto", width: '60%', textAlign: "center", fontSize: 16}}>
-                Gabsyn maintains this website (the “Website”) to provide you with information about products and services available through us, and information about Gabsyn. Please read these Terms and Conditions carefully before accessing or using this Website.
-                </Paragraph>
+                {/* <h1 style={{color: "white", backgroundColor: "var(--app-purple)", padding: "8px 16px"}}>Terms and Conditions</h1> */}
+                
 
             </div>
 
@@ -49,7 +47,13 @@ export default function ApplyForLoan() {
                 Gabsyn maintains this website (the “Website”) to provide you with information about products and services available through us, and information about Gabsyn. Please read these Terms and Conditions carefully before accessing or using this Website.
                 </Paragraph>
             </div> */}
-            
+            {/* <Title level={2} style={{width: "100%", textAlign: "center", marginTop: "50px", marginBottom: "50px"}}>
+                Terms and Conditions
+            </Title> */}
+
+            <Paragraph ellipsis={{rows: 6, expandable: true}} style={{margin: "50px auto", width: '60%', textAlign: "center", fontSize: 16}}>
+                Gabsyn maintains this website (the “Website”) to provide you with information about products and services available through us, and information about Gabsyn. Please read these Terms and Conditions carefully before accessing or using this Website.
+             </Paragraph>
 
             <div className="container" style={{marginTop: 50, textAlign: 'center'}}>
                 

@@ -233,12 +233,40 @@ button:hover{
 
 .about_us_background{
   height: 500px;
-  background-image: url(/assets/images/backgrounds/Forms_HeroImg.png);
+  background-image: url(/assets/images/backgrounds/Banner_for_the_Company_Page.jpg);
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.terms_and_conditions_background{
+  height: 500px;
+  background-image: url(/assets/images/backgrounds/terms-and-conditions.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.privacy_policy_background{
+  height: 500px;
+  background-image: url(/assets/images/backgrounds/Privacy_Policy.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq_background{
+  height: 500px;
+  background-image: url(/assets/images/backgrounds/FAQ-picture.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .ant-modal-content{
   text-align: center;  

@@ -11,6 +11,16 @@ export interface ToggleDrawer{
     payload: boolean
 }
 
+export interface OpenDrawer{
+    type: constants.OPEN_DRAWER
+    payload: null
+}
+
+export interface CloseDrawer{
+    type: constants.CLOSE_DRAWER
+    payload: null
+}
+
 export interface LogoutCurrentUser{
     type: constants.LOGOUT_CURRENT_USER,
     payload: null
@@ -28,10 +38,17 @@ export function setCurrentUser(payload:any): SetCurrentUser {
     }
 }
 
-export function toggleDrawer(payload:boolean): ToggleDrawer{
+export function openDrawer(): OpenDrawer{
     return {
-        type: constants.TOGGLE_DRAWER,
-        payload: payload
+        type: constants.OPEN_DRAWER,
+        payload: null
+    }
+}
+
+export function closeDrawer(): CloseDrawer{
+    return {
+        type: constants.CLOSE_DRAWER,
+        payload: null
     }
 }
 
@@ -50,4 +67,4 @@ export function setProgressVisible(payload:boolean): ProgressVisible{
 }
 
 export type CurrentUserAction = SetCurrentUser | LogoutCurrentUser;
-export type NavbarAction = ToggleDrawer | SetCurrentUser | LogoutCurrentUser;
+export type NavbarAction = OpenDrawer | CloseDrawer | SetCurrentUser | LogoutCurrentUser;

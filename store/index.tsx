@@ -4,7 +4,7 @@ import {StoreState} from '../types';
 
 let store = createStore(
                    combineReducers(
-                    {drawerReducer:reducers.drawerReducer, setUserReducer:reducers.setUserReducer}       
+                    {drawerOpenReducer:reducers.drawerOpenReducer, drawerCloseReducer:reducers.drawerCloseReducer, setUserReducer:reducers.setUserReducer}       
                    )
             );
 

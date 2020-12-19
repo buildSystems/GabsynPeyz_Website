@@ -2,11 +2,17 @@ import * as actions from '../actions';
 import {StoreState} from '../types';
 import * as constants from '../constants';
 
-let initialState = {isLoggedIn: false, drawerVisible: true, loggedInUser: null, progressVisible: false};
+let initialState = {isLoggedIn: false, drawerVisible: false, loggedInUser: null, progressVisible: false};
 
-export function drawerReducer(state: StoreState = initialState, action: actions.ToggleDrawer): StoreState{
+export function drawerOpenReducer(state: StoreState = initialState, action: actions.OpenDrawer): StoreState{
    
-    return {...state, drawerVisible:!state.drawerVisible} ;
+    return {...state, drawerVisible: true};
+        
+}
+
+export function drawerCloseReducer(state: StoreState = initialState, action: actions.CloseDrawer): StoreState{
+   
+    return {...state, drawerVisible: false};
         
 }
 

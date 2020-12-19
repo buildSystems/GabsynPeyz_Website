@@ -37,11 +37,14 @@ export default function ApplyForLoan() {
             <Navbar />
             <div className="about_us_background">
 
-                <h1 style={{color: "white", backgroundColor: "var(--app-purple)", padding: "8px 16px"}}>About Us</h1>
+                {/* <h1 style={{color: "white", backgroundColor: "var(--app-purple)", padding: "8px 16px"}}>About Us</h1> */}
                 
             </div>
 
             <div className="container">
+                <Title level={2} style={{width: "100%", textAlign: "center", marginTop: "50px"}}>
+                    WHO WE ARE
+                </Title>
                 <Paragraph ellipsis={{rows: 6, expandable: true}} style={{margin: "50px auto", textAlign: "center", fontSize: 16}}>
                     Gabsyn Peyzs Surulere Cooperative (Multipurpose) Society Ltd is a member owned indigenous society established by a set of young upward mobile entrepreneurs and professionals (men and women of integrity) in their respective fields ; the concept was to build a Synergy of both the formal and informal sectors in response to individual and collective socio-economic needs in order to fulfil purpose, thus the main objectives of the society is to help members with working capital , financial and risk management advisory services, housing, etc. to enable them develop multiple streams of income and achieve financial freedom.
                     The strategy is to build a platform that creates a synergy between the formal and informal sectors. We current boast of members that include Bankers, Insurance staff, Telecoms staff, Oil and Gas workers, agricultural experts, Staff of Federal and State agencies, entertainers, general traders, artisans, spare part markets : Ladipo Market, Willoughby, etc., drivers, retirees, food sellers, Bean cake sellers ,fashion designers, market women, transporters : Bike riders , Bus Drivers , etc.

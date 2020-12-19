@@ -7,6 +7,12 @@ export type LOGOUT_CURRENT_USER = typeof LOGOUT_CURRENT_USER;
 export const TOGGLE_DRAWER: string = "TOGGLE_DRAWER";
 export type TOGGLE_DRAWER = typeof TOGGLE_DRAWER;
 
+export const OPEN_DRAWER: string = "OPEN_DRAWER";
+export type OPEN_DRAWER = typeof OPEN_DRAWER;
+
+export const CLOSE_DRAWER: string = "CLOSE_DRAWER";
+export type CLOSE_DRAWER = typeof CLOSE_DRAWER;
+
 export const PROGRESS_VISIBLE: string = "PROGRESS_VISIBLE";
 export type PROGRESS_VISIBLE = typeof PROGRESS_VISIBLE;
 
