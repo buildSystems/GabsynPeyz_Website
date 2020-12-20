@@ -836,7 +836,7 @@ const Navbar = (props:Props) => {
                                 
                             </SubMenu>
                            
-                            <Menu.Item key="20">
+                            <Menu.Item key="20" onClick={() => {openPage('/about-us')} }>
                                 <span>
                                     <BankOutlined />
                                     <span>Company</span>
@@ -908,7 +908,7 @@ const Navbar = (props:Props) => {
                                 
                             </SubMenu>
                                                         
-                            <Menu.Item key="20">
+                            <Menu.Item key="20" onClick={() => {openPage('/about-us')} }>
                                 <span>
                                     <BankOutlined />
                                     <span>Company</span>
@@ -980,7 +980,7 @@ const Navbar = (props:Props) => {
                             </SubMenu>
                             
                             
-                            <Menu.Item key="20">
+                            <Menu.Item key="20" onClick={() => {openPage('/about-us')} }>
                                 <span>
                                     <BankOutlined />
                                     <span>Company</span>

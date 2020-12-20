@@ -205,13 +205,13 @@ export default function Investments() {
                     </select>
 
                     
-                    <label for="loan_amount">Amount</label>
+                    <label htmlFor="loan_amount">Amount</label>
                     <input type="text" id="loan_amount" placeholder="e.g. 100,000" value={investmentState.amount} onChange={handleAmountChange}/>
-                    <small class="error" id="loan_amount_error"></small>
+                    <small className="error" id="loan_amount_error"></small>
 
-                    <label for="loan_months">Months</label>
+                    <label htmlFor="loan_months">Months</label>
                     <input type="number" min="0" max="24" id="loan_months" placeholder="e.g. 6 months" value={investmentState.tenure} onChange={handleTenureChange} />
-                    <small class="error" id="loan_months_error"></small>
+                    <small className="error" id="loan_months_error"></small>
 
                     
                     <Row>

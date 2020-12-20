@@ -97,8 +97,9 @@ export default function ApplyForLoan() {
                 <p className="filters">
                     {
                         categories.map((category, index) => {
-                            console.log(`Current category: ${categories[index]}`);
-                            return <span {...categories[index] == currentFAQs ? `className="active"` : `className="filter"`} 
+                            console.log(`Current category: ${category}`);
+                            return <span className="filter" key={`filter-${index}`}
+                            // {...category[index] == currentFAQs ? `className="active"` : `className="filter"`} 
                                     onClick={() => setCurrentFAQs(categories[index])}>{category} | </span>
                         })
                     }
