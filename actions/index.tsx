@@ -6,10 +6,6 @@ export interface SetCurrentUser{
     payload: any
 }
 
-export interface ToggleDrawer{
-    type: constants.TOGGLE_DRAWER
-    payload: boolean
-}
 
 export interface OpenDrawer{
     type: constants.OPEN_DRAWER

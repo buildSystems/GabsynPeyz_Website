@@ -15,8 +15,6 @@ import {
   Carousel 
 } from 'antd';
 import * as Constants from '../constants';
-import "../components/Navbar";
-
 
 import {
   SearchOutlined

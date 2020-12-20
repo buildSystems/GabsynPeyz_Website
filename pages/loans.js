@@ -23,8 +23,6 @@ import {
   SearchOutlined
 } from '@ant-design/icons'
 
-import "../components/Navbar";
-
 const {Title, Text,  Paragraph} = Typography;
 
 

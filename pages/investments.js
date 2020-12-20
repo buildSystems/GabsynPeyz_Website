@@ -17,8 +17,6 @@ import {
 
 import * as Constants from '../constants';
 
-import "../components/Navbar";
-
 
 import {
   SearchOutlined
