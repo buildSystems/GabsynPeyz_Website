@@ -20,7 +20,7 @@ import {BASE_PATH} from '../constants';
 import * as Constants from '../constants';
 
 import {
-  SearchOutlined
+  SearchOutlined, ConsoleSqlOutlined
 } from '@ant-design/icons'
 
 const {Title, Text,  Paragraph} = Typography;
@@ -66,7 +66,7 @@ export default function Loans() {
         {
             "name": "Business/SME Loan",
             "APR rate":130.864,
-            "flat rate": 8.5
+            "flat rate": 7.0
         },
         {
             "name":"Micro Business Loan",
@@ -159,7 +159,7 @@ export default function Loans() {
         // }
     ];
 
-    let [loanState, setLoanState] = useState({amount:'', tenure:'', rate:0, payment:0});
+    let [loanState, setLoanState] = useState({tenureDisabled: false, amount:'', tenure:'', rate:0, payment:0});
 
     const calculatePayment = () => {
         return parseInt(amount) + parseInt(amount) * parseInt(rate) * parseInt(tenure) / 100; 
@@ -211,10 +211,21 @@ export default function Loans() {
     }
 
     const handleRateChange = (event) => {
-        setLoanState({
-            ...loanState, rate: event.target.value, 
-            payment: ((parseInt(actualAmount) + parseInt(actualAmount) * parseFloat(event.target.value) * parseInt(loanState.tenure) / 100) / parseInt(loanState.tenure) ).toFixed(2)
-        });
+        if(event.target.selectedIndex == 2){
+            
+            setLoanState({
+                ...loanState, rate: event.target.value, tenureDisabled: true, tenure: 1,
+                payment: ((parseInt(actualAmount) + parseInt(actualAmount) * parseFloat(event.target.value) * parseInt(loanState.tenure) / 100) / parseInt(loanState.tenure) ).toFixed(2)
+            });
+
+            console.log('Salary Advance Selected');
+        }else{
+            setLoanState({
+                ...loanState, rate: event.target.value, tenureDisabled: false, tenure: 6,
+                payment: ((parseInt(actualAmount) + parseInt(actualAmount) * parseFloat(event.target.value) * parseInt(loanState.tenure) / 100) / parseInt(loanState.tenure) ).toFixed(2)
+            });
+        }
+        
     }
 
   return (
@@ -236,11 +247,11 @@ export default function Loans() {
                     <div className="container">
                         <div className="loansText" >
                             
-                            <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>                        
+                            <Title level={1} style={{color: 'var(--app-purple)', width: '400px', lineHeight: '2rem'}}>                         
                                 With GPL Salary Loan                   
                             </Title>
-                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', lineHeight: '1.0rem'}}>
-                                Everyday is a payday with up to 50% of your salary payout within 24 hours of request
+                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', fontSize: "20px",  lineHeight: '1.5rem'}}>
+                                Everyday is a payday with up to 50% of your salary payout
                             </p>
                             
                             {/* <Link href="/loans#">
@@ -258,10 +269,10 @@ export default function Loans() {
                     <div className="container">
                         <div className="loansText" >
                             
-                            <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>                        
+                            <Title level={1} style={{color: 'var(--app-purple)', width: '400px', lineHeight: '2rem'}}>                        
                             Need Quick Cash?                   
                             </Title>
-                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', lineHeight: '1.0rem'}}>
+                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', fontSize: "20px", lineHeight: '1.5rem'}}>
                             Get up to 5 million Naira within 24 hours with easy and convenience repayment plan
                             </p>
                             
@@ -280,10 +291,10 @@ export default function Loans() {
                     <div className="container">
                         <div className="loansText" >
                             
-                            <Title level={2} style={{color: 'var(--app-purple)', width: '200px'}}>                        
+                            <Title level={1} style={{color: 'var(--app-purple)', width: '400px', lineHeight: '2rem'}}>                          
                             Get Asset backed loans                   
                             </Title>
-                            <p style={{color: 'var(--app-purple)', marginBottom: '0px !important', lineHeight: '1em'}}>
+                            <p style={{color: 'var(--app-purple)', marginBottom: '0px !important', fontSize: "20px", lineHeight: '1.5em'}}>
                             Get the right loan to help you meet your business needs of up to 10 million Naira within 24 hours
                             </p>
                                                         
@@ -304,7 +315,8 @@ export default function Loans() {
                                                 left: '50%', top: '0px', 
                                                 paddingTop: '350px',
                                                 transform: 'translateX(-50%)',
-                                                height: '100%'}}>
+                                                height: '100vh'
+                                              }}>
 
                 <div className="calculator" >
                     
@@ -334,7 +346,7 @@ export default function Loans() {
                     <small className="error" id="loan_amount_error"></small>
 
                     <label htmlFor="loan_months">Months</label>
-                    <input type="number" min="0" max="24" id="loan_months" placeholder="e.g. 6 months" value={loanState.tenure} onChange={handleTenureChange}/>
+                    <input type="number" min="0" max="24" id="loan_months" placeholder="e.g. 6 months" value={loanState.tenure} onChange={handleTenureChange} disabled={loanState.tenureDisabled}/>
                     <small className="error" id="loan_months_error"></small>
 
                     <Row>

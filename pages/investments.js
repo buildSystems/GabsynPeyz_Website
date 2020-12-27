@@ -111,10 +111,10 @@ export default function Investments() {
                     <div className="container">
                         <div className="loansText" >
                             
-                            <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>                        
-                                Earn up to 30% on investment...                 
+                            <Title level={1} style={{color: 'var(--app-purple)', width: '400px', lineHeight: '2rem'}}>                        
+                                Earn up to 30% on Investment per annum...                 
                             </Title>
-                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', lineHeight: '1.0rem'}}>
+                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', fontSize: "20px", lineHeight: '1.5rem'}}>
                                 When you invest in GPL Coop Income Fund for a period of 180 days starting with a minimum deposit of 50,000 Naira.
                             </p>
                             
@@ -132,11 +132,11 @@ export default function Investments() {
                     <div className="container">
                         <div className="loansText" >
                             
-                            <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>                        
+                            <Title level={1} style={{color: 'var(--app-purple)', width: '400px', lineHeight: '2rem'}}>                         
                                 Start investing early in a better future...  
                             </Title>
-                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', lineHeight: '1.0rem'}}>
-                                With as low as 50,000 earn up to 24% annually when you invest in GPL Coop Income Fund
+                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', fontSize: "20px", lineHeight: '1.5rem'}}>
+                                With as low as 50,000 earn up to 30% annually when you invest in GPL Coop Income Fund
                             </p>
                             
                             {/* <Link href="/loans#">
@@ -153,10 +153,10 @@ export default function Investments() {
                     <div className="container">
                         <div className="loansText" >
                             
-                            <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>                        
+                            <Title level={1} style={{color: 'var(--app-purple)', width: '400px', lineHeight: '2rem'}}>                         
                                 Get a better retirement plan... 
                             </Title>
-                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', lineHeight: '1.0rem'}}>
+                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', fontSize: "20px", lineHeight: '1.5rem'}}>
                                 Start investing today in the GPL Coop Income Fund with a minimum of 50,000 Naira and get return on investment of 30% annually.
                             </p>
                             
@@ -181,7 +181,7 @@ export default function Investments() {
                 
                 <div className="calculator" >
                     
-                    <Title level={4} style={{color: 'var(--app-purple)', fontSize: '14px'}}>Calculate Investment Return</Title>
+                    <Title level={4} style={{color: 'var(--app-purple)', fontSize: '14px'}}>Calculate your Return on Investment</Title>
                     
                     <hr />
 
@@ -214,7 +214,7 @@ export default function Investments() {
                     
                     <Row>
                         <Col span={12}>
-                            <p style={{color: 'black', fontSize: '10px', marginTop: 10, marginBottom: 0}}>Total Return on Investment</p>
+                            <p style={{color: 'black', fontSize: '10px', marginTop: 10, marginBottom: 0}}>Total Return on Investment (ROI)</p>
                             <p style={{color: 'var(--app-purple)', fontSize: '13px'}}>NGN {investmentState.payment == 'Infinity' || investmentState.payment == 'NaN' ? 0 : numberWithCommas(investmentState.payment)}</p>
                         </Col>
                         <Col span={12} style={{textAlign: 'right'}}>

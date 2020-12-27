@@ -110,11 +110,11 @@ export default function Cooperatives() {
                     <div className="container">
                         <div className="loansText" >
                             
-                            <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>                        
+                            <Title level={1} style={{color: 'var(--app-purple)', width: '400px', lineHeight: '2rem'}}>                        
                                 Is your Money Working for you?               
                             </Title>
-                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', lineHeight: '1.0rem'}}>
-                                Join a nationwwide clique of Technocrats, Entrepreneurs, Traders etc. and start saving with as low as 1000 Naira
+                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', fontSize: "20px", lineHeight: '1.5rem'}}>
+                                Start with as low as N1,000 and earn up to 24% per annum with several other benefits
                             </p>
                             
                             {/* <Link href="/loans#">
@@ -132,10 +132,10 @@ export default function Cooperatives() {
                     <div className="container">
                         <div className="loansText" >
                             
-                            <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>                        
+                            <Title level={1} style={{color: 'var(--app-purple)', width: '400px', lineHeight: '2rem'}}>                        
                                 Plan and Enjoy in Rainy days...           
                             </Title>
-                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', lineHeight: '1.0rem'}}>
+                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', fontSize: "20px",  lineHeight: '1.6rem'}}>
                                 By considering opening a cooperative savings account today and start enjoying the benefits of financial freedom
                             </p>
                             
@@ -154,10 +154,10 @@ export default function Cooperatives() {
                     <div className="container">
                         <div className="loansText" >
                             
-                            <Title level={2} style={{color: 'var(--app-purple)', width: '200px', lineHeight: '1.6rem'}}>                        
+                            <Title level={1} style={{color: 'var(--app-purple)', width: '400px', lineHeight: '2rem'}}>                         
                                 With target savers account...                 
                             </Title>
-                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', lineHeight: '1.0rem'}}>
+                            <p style={{color: 'var(--app-purple)', marginBottom: '0px', fontSize: "20px", lineHeight: '1.5rem'}}>
                                 Secure a better future for your children by opening a target savers account with as low as 1000 Naira
                             </p>
                             

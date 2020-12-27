@@ -170,7 +170,7 @@ export default function ApplyForLoan() {
                         <div style={{margin: '30px'}}>
                             <Title level={4}>Contact us via</Title>
                             <Text>08106345038, 08187313922, 08063047854</Text><br />
-                            <Text>care@gabsynpeyzs.com,info@gabsynpeyzs.com</Text>
+                            <Text>ccare@gabsynpeyzs.ng, info@gabsynpeyzs.ng</Text>
                         </div>
 
                     </Col>

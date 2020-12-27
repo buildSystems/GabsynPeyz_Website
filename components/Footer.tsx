@@ -76,7 +76,7 @@ const Footer = () => {
                                 </Space>                        
                             </div>
                             <Text style={{fontSize: '12px'}}>
-                            care@gabsynpeyzs.com,info@gabsynpeyzs.com 08106345038 gabsynonskype
+                            ccare@gabsynpeyzs.ng, info@gabsynpeyzs.ng, 08106345038, gabsynonskype
                             </Text> 
                         </Col>
 

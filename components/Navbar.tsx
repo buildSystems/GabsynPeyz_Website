@@ -725,7 +725,7 @@ const Navbar = (props:Props) => {
             >
                 <div className="drawerContent">
                     <h4 style={{color: 'white', fontSize: '12px', position: 'absolute', bottom: '30px'}}>The Gabsyn Peyzs</h4>
-                    <p style={{color: 'white', fontSize: '10px', position: 'absolute', bottom: '10px'}}>08106345038, 08187313922</p>
+                    <p style={{color: 'white', fontSize: '10px', position: 'absolute', bottom: '10px'}}>08106345038, 08187313922, 08063047854</p>
                 </div>
 
                 {
@@ -755,20 +755,20 @@ const Navbar = (props:Props) => {
                             <Menu.Item key="sub3" onClick={() => {openPage('/cooperatives')} }>
                                 <span>
                                     <ApartmentOutlined />
-                                    <span>Coorperatives</span>
+                                    <span>Cooperatives</span>
                                 </span>
                             </Menu.Item>                            
                             
                             <Menu.Item key="20" onClick={() => {openPage('/about-us')} }>
                                 <span>
                                     <BankOutlined />
-                                    <span>Company</span>
+                                    <span>About The Gabsyn Peyzs</span>
                                 </span>
                             </Menu.Item>
                             <Menu.Item key="26">
                                 <span>
                                     <BankOutlined />
-                                    <a href="http://161.35.175.18/user/register" style={{color: 'white'}}><span>Investors Forum</span></a>
+                                    <a href="http://161.35.175.18/user/register" style={{color: 'white'}}><span>Investors Relations</span></a>
                                 </span>
                             </Menu.Item>
                             {/* <Divider style={{backgroundColor: 'rgba(255, 255, 255, .5)'}} /> */}
@@ -778,7 +778,7 @@ const Navbar = (props:Props) => {
                                 title={
                                     <span>
                                     <QuestionCircleOutlined />
-                                    <span>Help</span>
+                                    <span>Help Centre</span>
                                     </span>
                                 }
                             >
@@ -839,7 +839,7 @@ const Navbar = (props:Props) => {
                             <Menu.Item key="20" onClick={() => {openPage('/about-us')} }>
                                 <span>
                                     <BankOutlined />
-                                    <span>Company</span>
+                                    <span>About The Gabsyn Peyzs</span>
                                 </span>
                             </Menu.Item>
                             {/* <Menu.Item key="21">
@@ -854,7 +854,7 @@ const Navbar = (props:Props) => {
                                 title={
                                     <span>
                                     <QuestionCircleOutlined />
-                                    <span>Help</span>
+                                    <span>Help Centre</span>
                                     </span>
                                 }
                             >
@@ -911,13 +911,13 @@ const Navbar = (props:Props) => {
                             <Menu.Item key="20" onClick={() => {openPage('/about-us')} }>
                                 <span>
                                     <BankOutlined />
-                                    <span>Company</span>
+                                    <span>About The Gabsyn Peyzs</span>
                                 </span>
                             </Menu.Item>
                             <Menu.Item key="26">
                                 <span>
                                     <BankOutlined />
-                                    <a href="http://161.35.175.18/user/register" style={{color: 'white'}}><span>Investors Forum</span></a>
+                                    <a href="http://161.35.175.18/user/register" style={{color: 'white'}}><span>Investors Relations</span></a>
                                 </span>
                             </Menu.Item>
                             {/* <Menu.Item key="21">
@@ -932,7 +932,7 @@ const Navbar = (props:Props) => {
                                 title={
                                     <span>
                                     <QuestionCircleOutlined />
-                                    <span>Help</span>
+                                    <span>Help Centre</span>
                                     </span>
                                 }
                             >
@@ -969,7 +969,7 @@ const Navbar = (props:Props) => {
                                 title={
                                     <span>
                                     <ApartmentOutlined />
-                                    <span>Coorperatives</span>
+                                    <span>Cooperatives</span>
                                     </span>
                                 }
                             >
@@ -983,7 +983,7 @@ const Navbar = (props:Props) => {
                             <Menu.Item key="20" onClick={() => {openPage('/about-us')} }>
                                 <span>
                                     <BankOutlined />
-                                    <span>Company</span>
+                                    <span>About The Gabsyn Peyzs</span>
                                 </span>
                             </Menu.Item>
                             {/* <Menu.Item key="21">
@@ -997,7 +997,7 @@ const Navbar = (props:Props) => {
                                 title={
                                     <span>
                                     <QuestionCircleOutlined />
-                                    <span>Help</span>
+                                    <span>Help Centre</span>
                                     </span>
                                 }
                             >
